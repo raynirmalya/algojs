@@ -11,8 +11,6 @@ const bubbleSort = (unsortedArr)=>{
            isSwapped = true; 
          } 
       } 
-   
-      // IF no two elements were swapped by inner loop, then break 
       if (isSwapped == false) {
         break; 
       }   
