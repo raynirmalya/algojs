@@ -18,5 +18,5 @@ const insertionSort = (unsortedArr)=>{
     return unsortedArr;
   } 
 
-// export default bubbleSort;
+// export default insertionSort;
 module.exports = insertionSort;
