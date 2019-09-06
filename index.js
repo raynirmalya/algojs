@@ -5,5 +5,6 @@ const mergeSort = require("./sort/merge.js");
 // import bubbleSort from './bubble.js';
 
 console.log('bubble', bubbleSort([12, 11, 13, 5, 6, 7]));
+console.log('insertion', insertionSort([12, 11, 13, 5, 6, 7]));
 console.log('selection', selectionSort([12, 11, 13, 5, 6, 7]));
 console.log('merge', mergeSort([12, 11, 13, 5, 6, 7]));
