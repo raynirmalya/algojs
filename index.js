@@ -14,6 +14,7 @@ const cocktailSort = require("./sort/cocktail.js");
 const bitonicSort = require("./sort/bitonic.js");
 const pancakeSort = require("./sort/pancake.js");
 const countSort = require("./sort/count.js");
+const bogoSort = require("./sort/bogo.js");
 // import bubbleSort from './bubble.js';
 
 console.log('bubble', bubbleSort([12, 11, 13, 5, 6, 7]));
@@ -31,4 +32,4 @@ console.log('cycle', cycleSort([-5, -10, 0, -3, 8, 5, -1, 10]));
 console.log('cocktail', cocktailSort([-5, -10, 0, -3, 8, 5, -1, 10]));
 console.log('bitonicSort', bitonicSort([-5, -10, 0, -3, 8, 5, -1, 10]));
 console.log('pancakeSort', pancakeSort([7,6,5,9,8,4,3,1,2,0]));
-console.log('countSort', countSort([7,6,5,9,8,4,3,1,2,0]));
+console.log('bogoSort', bogoSort([7,6,5,9,8,4,3,1,2,0]));

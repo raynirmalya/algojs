@@ -1,0 +1,28 @@
+
+const swap = require("./swap.js");
+// import swap from './swap.js'
+function shuffle(a) { 
+    for (let i=1; i <= a.length; i++) { 
+        a = swap(a, i, +(Math.random()*i)); 
+    }
+    return a;
+} 
+  
+function isSorted(a) { 
+    for (let i=1; i<a.length; i++) {
+        if (a[i] < a[i-1]) {
+            return false; 
+        }
+    }
+    return true; 
+}
+
+const bogoSort = (arr)=>{
+    while (isSorted(arr) == false) {
+        shuffle(arr); 
+        console.log(isSorted(arr));
+    }
+    return arr;
+}
+// export default bogoSort;
+module.exports = bogoSort;
