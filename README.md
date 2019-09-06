@@ -5,4 +5,5 @@
 # 3. Insertion Sort.
 # 4. Quick Sort.
 # 5. Heap Sort.
-# 6. Merge Sort
+# 6. Merge Sort.
+# 7. Counting Sort.
