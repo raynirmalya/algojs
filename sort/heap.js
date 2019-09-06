@@ -1,9 +1,9 @@
 const swap = require("./swap.js");
 // import swap from './swap.js'
-function createHeap(arr, len, index) {
-        const root = i;
-        const l = 2*i + 1; 
-        const r = 2*i + 2; 
+function createHeap(arr, len, i) {
+        let root = i;
+        let l = 2*i + 1; 
+        let r = 2*i + 2; 
         if (l < len && arr[l] > arr[root]) {
             root = l; 
         }
