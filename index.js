@@ -10,6 +10,7 @@ const shellSort = require("./sort/shell.js");
 const timSort = require("./sort/tim.js");
 const pholeSort = require("./sort/pigeonhole.js");
 const cycleSort = require("./sort/cycle.js");
+const cocktailSort = require("./sort/cocktail.js");
 // import bubbleSort from './bubble.js';
 
 console.log('bubble', bubbleSort([12, 11, 13, 5, 6, 7]));
@@ -24,3 +25,4 @@ console.log('bucket', bucketSort([7, 3, 2, 1, 0, 45, 9, 41]));
 console.log('tim', timSort([-5, -10, 0, -3, 8, 5, -1, 10]));
 // console.log('phole', pholeSort([12,34,54,2,3]));
 console.log('cycle', cycleSort([-5, -10, 0, -3, 8, 5, -1, 10]));
+console.log('cocktail', cocktailSort([-5, -10, 0, -3, 8, 5, -1, 10]));
