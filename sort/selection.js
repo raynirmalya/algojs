@@ -2,20 +2,20 @@
 
 const swap = require("./swap.js");
 // import swap from './swap.js'
-const selectionSort = (unsortedArr)=>{
-      const len = unsortedArr.length; 
+const selectionSort = (arr)=>{
+      const len = arr.length; 
       // One by one move boundary of unsorted subarray 
       for (let i = 0; i < len-1; i++) { 
           // Find the minimum element in unsorted array 
           let minRecIndex = i; 
           for (let j = i+1; j < len; j++) {
-              if (unsortedArr[j] < unsortedArr[minRecIndex]) {
+              if (arr[j] < arr[minRecIndex]) {
                 minRecIndex = j; 
               }
           } 
-          unsortedArr = swap(unsortedArr,i,minRecIndex); 
+          arr = swap(arr,i,minRecIndex); 
       } 
-      return unsortedArr;
+      return arr;
   } 
 
 // export default bubbleSort;

@@ -1,21 +1,17 @@
-
-
-const swap = require("./swap.js");
-// import swap from './swap.js'
-const insertionSort = (unsortedArr)=>{
+const insertionSort = (arr)=>{
     let i, key, j;  
-    const len = unsortedArr.length; 
+    const len = arr.length; 
     for (i = 1; i < len; i++){  
-        key = unsortedArr[i];  
+        key = arr[i];  
         j = i - 1;  
-        while (j >= 0 && unsortedArr[j] > key) 
+        while (j >= 0 && arr[j] > key) 
         {  
-            unsortedArr[j + 1] = unsortedArr[j];  
+            arr[j + 1] = arr[j];  
             j = j - 1;  
         }  
-        unsortedArr[j + 1] = key;  
+        arr[j + 1] = key;  
     }
-    return unsortedArr;
+    return arr;
   } 
 
 // export default insertionSort;
