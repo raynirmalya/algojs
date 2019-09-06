@@ -2,14 +2,15 @@
 const swap = require("./swap.js");
 // import swap from './swap.js'
 function shuffle(a) { 
-    for (let i=1; i <= a.length; i++) { 
-        a = swap(a, i, +(Math.random()*i)); 
+    for (let i=0; i < a.length; i++) { 
+        console.log('1112',a);
+        a = swap(a, i, parseInt(Math.random()*i)); 
     }
     return a;
 } 
   
 function isSorted(a) { 
-    for (let i=1; i<a.length; i++) {
+    for (let i=0; i<a.length; i++) {
         if (a[i] < a[i-1]) {
             return false; 
         }
