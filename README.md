@@ -1,5 +1,5 @@
-# This is js library for algorithms related to data structure
-# Till now we have published below algorthims.
+ This is js library for algorithms related to data structure.
+ Till now we have published below algorthims.
  * Bubble Sort.
  * Selection Sort.
  * Insertion Sort.
