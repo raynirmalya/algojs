@@ -13,3 +13,7 @@
  * Pigeonhole Sort.
  * Bucket Sort.
  * Radix Sort.
+ * Pancake Sort
+ * Bitonic Sort
+ * Cocktail Sort
+ * Gnome Sort
