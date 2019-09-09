@@ -1,22 +1,24 @@
 const swap = require("./swap.js");
 // import swap from './swap.js'
-function sort (arr, l, h) { 
-        if (l >= h) 
-            return; 
-        if (arr[l] > arr[h]) { 
-            arr = swap(arr, l, h);
-        } 
-
-        if (h - l + 1 > 2) { 
-            let t = (h - l + 1) / 3; 
-            sort(arr, l, h - t); 
-            sort(arr, l + t, h); 
-            sort(arr, l, h - t); 
-        } 
-    return arr;
-}
-const stoogeSort = (arr)=>{
-    arr = sort( arr, 0, arr.length-1);
+const stoogeSort = (arr, i, j)=> {
+    if (j === undefined) {
+        j = arr.length - 1;
+    }
+ 
+    if (i === undefined) {
+        i = 0;
+    }
+ 
+    if (arr[j] < arr[i]) {
+       arr = swap(arr, i, j);
+    }
+ 
+    if (j - i > 1) {
+        var t = Math.floor((j - i + 1) / 3);
+        stoogeSort(arr, i, j-t);
+        stoogeSort(arr, i+t, j);
+        stoogeSort(arr, i, j-t);
+    }
     return arr;
 }
 // export default stoogeSort;
