@@ -1,15 +1,15 @@
 # This is js library for algorithms related to data structure
 # Till now we have published below algorthims.
- 1. Bubble Sort.
- 2. Selection Sort.
- 3. Insertion Sort.
- 4. Quick Sort.
- 5. Heap Sort.
- 6. Merge Sort.
- 7. Counting Sort.
- 8. Cycle Sort.
- 9. Tim Sort.
- 10. Shell Sort.
+ * Bubble Sort.
+ * Selection Sort.
+ * Insertion Sort.
+ * Quick Sort.
+ * Heap Sort.
+ * Merge Sort.
+ * Counting Sort.
+ * Cycle Sort.
+ * Tim Sort.
+ * Shell Sort.
  * Pigeonhole Sort.
  * Bucket Sort.
  * Radix Sort.
