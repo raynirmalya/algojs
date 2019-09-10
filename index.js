@@ -19,6 +19,7 @@ const gnomeSort = require("./sort/gnome.js");
 const stoogeSort = require("./sort/stooge.js");
 const sleepSort = require("./sort/sleep.js");
 const combSort = require("./sort/comb.js");
+const beadSort = require("./sort/bead.js");
 
 // import bubbleSort from './bubble.js';
 
@@ -42,4 +43,5 @@ console.log('gnomeSort', gnomeSort([7,6,5,9,8,4,3,1,2,0]));
 console.log('stoogeSort', stoogeSort([ 2, 4, 5, 3, 1 ]));
 // console.log('sleepSort', sleepSort([ 7,6,5,9,8,4,3,1,2,0 ]));
 console.log('combSort', combSort([ 7,6,5,9,8,4,3,1,2,0 ]));
+console.log('beadSort', beadSort([ 12, 11, 13, 5, 6, 7]));
 

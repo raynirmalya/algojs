@@ -17,3 +17,6 @@
  * Bitonic Sort
  * Cocktail Sort
  * Gnome Sort
+ * Comb Sort
+ * Stooge Sort
+ * Bead Sort
