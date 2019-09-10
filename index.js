@@ -78,8 +78,9 @@ ll.reverse();
 let curr = ll.swap(2,5);
 // ll.clear();
 console.log(JSON.stringify(curr));
+console.log(JSON.stringify(ll.sort()));
 let frmll = new LinkedList();
-console.log(ll.indexOf(8), ll.length(), ll.isEmpty(), ll.getNodeAt(2), ll.getDataAt(2), ll.toArray(), '*****', frmll.fromArray([1,2,3]));
+//console.log(ll.indexOf(8), ll.length(), ll.isEmpty(), ll.getNodeAt(2), ll.getDataAt(2), ll.toArray(), '*****', frmll.fromArray([1,2,3]));
 
 let dll = new DoublyLinkedList();
 // ll.insertAtBeginning(11);
@@ -97,7 +98,7 @@ dll.deleteNodeAt(2);
 dll.reverse();
 let currdll = dll.add(230);
 let frmdll = new DoublyLinkedList();
-console.log(currdll, dll.getDataAt(1), dll.getNodeAt(1), ll.toArray(),
- '*****', frmdll.fromArray([1,2,3]), '00000', frmdll.deleteLastNode(), '1111', frmdll.deleteFirstNode()
- , dll.search(27), dll.isEmpty(), dll.length(), frmdll.clear(), frmdll.length()
- );
+// console.log(currdll, dll.getDataAt(1), dll.getNodeAt(1), ll.toArray(),
+//  '*****', frmdll.fromArray([1,2,3]), '00000', frmdll.deleteLastNode(), '1111', frmdll.deleteFirstNode()
+//  , dll.search(27), dll.isEmpty(), dll.length(), frmdll.clear(), frmdll.length()
+//  );

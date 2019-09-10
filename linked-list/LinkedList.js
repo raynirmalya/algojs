@@ -1,6 +1,6 @@
 class LinkedList{
-    constructor(){
-        this.head = null;
+    constructor(data){
+        this.head = data || null;
     }
    insertAtEnd(data) {
         let newNode = new Node(data);
@@ -253,6 +253,62 @@ class LinkedList{
         newNode.next = this.head;
         this.head = newNode;
         return this.head;
+    }
+    sort() {
+    if (this.head.next === null) {
+        return this.head; 
+    }
+    let count = 0; 
+    let countList = this.head;
+    let leftPart = this.head; 
+    let leftPointer = this.head; 
+    let rightPart = null; 
+    let rightPointer = null; 
+    while (countList.next !== null) { 
+        count++; 
+        countList = countList.next; 
+    } 
+    let mid = Math.floor(count / 2) 
+    let count2 = 0; 
+    while (count2 < mid) { 
+        count2++; 
+        leftPointer = leftPointer.next; 
+    } 
+
+    rightPart = new LinkedList(leftPointer.next); 
+    leftPointer.next = null; 
+    return this.merge(this.sort(leftPart),this.sort(rightPart.head)) ;
+} 
+ 
+merge(left, right) { 
+    let result = new LinkedList() 
+    let resultPointer = result.head; 
+    let pointerLeft = left; 
+    let pointerRight = right;  
+    while (pointerLeft && pointerRight) { 
+        let tempNode = null; 
+        if (pointerLeft.node > pointerRight.node) { 
+            tempNode = pointerRight.node; 
+            pointerRight = pointerRight.next; 
+        } else { 
+            tempNode = pointerLeft.node 
+            pointerLeft = pointerLeft.next; 
+        } 
+
+        if (result.head == null) { 
+            result.head = new Node(tempNode); 
+            resultPointer = result.head;
+        } else { 
+            resultPointer.next = new Node(tempNode);
+            resultPointer = resultPointer.next;
+        } 
+    } 
+    resultPointer.next = pointerLeft; 
+    while (resultPointer.next) {
+        resultPointer = resultPointer.next;
+    }
+    resultPointer.next = pointerRight;
+     return result.head; 
     }
 }
 
