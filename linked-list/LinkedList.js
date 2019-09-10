@@ -124,6 +124,18 @@ LinkedList.prototype.indexOf= (data) =>{
     return -1; 
 } 
 
+LinkedList.prototype.search= (data) =>{ 
+    var count = 0; 
+    var current = this.head; 
+    while (current != null) { 
+        if (current.data === data) 
+            return count; 
+        count++; 
+        current = current.next; 
+    } 
+    return false; 
+}
+
 LinkedList.prototype.getNextNodeAt = (index)=>{
     let counter = 0;
     let node = this.head;
@@ -206,4 +218,35 @@ LinkedList.prototype.length = () => {
     }
     return counter; 
 } 
+
+LinkedList.prototype.reverse = ()=>{
+    let current = this.head;
+    let prev = null;
+    let next;
+    while(current !== null) {
+      next = current.next
+      current.next = prev
+      prev = current
+      current = next
+    }
+    this.head = prev
+    return this.head;
+  }
+  LinkedList.prototype.swap = ( nodeOne, nodeTwo ) => {
+    let current = this.head;
+    let counter = 0;
+    let firstNode;
+    while( current !== null ) {
+      current = current.next;
+      if( counter === (nodeOne - 1) ){
+        firstNode = current;
+      } else if( counter === (nodeTwo - 1) ) {
+        let temp = current.data;
+        current.data = firstNode.data;
+        firstNode.data = temp;
+      }
+      counter++;
+    }
+    return this.head;
+   }
 module.exports = LinkedList;
