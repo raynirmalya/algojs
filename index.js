@@ -96,4 +96,8 @@ dll.deleteNode(101);
 dll.deleteNodeAt(2);
 dll.reverse();
 let currdll = dll.add(230);
-console.log(currdll, dll.getDataAt(1), dll.getNodeAt(1), ll.toArray(), '*****', frmll.fromArray([1,2,3]));
+let frmdll = new DoublyLinkedList();
+console.log(currdll, dll.getDataAt(1), dll.getNodeAt(1), ll.toArray(),
+ '*****', frmdll.fromArray([1,2,3]), '00000', frmdll.deleteLastNode(), '1111', frmdll.deleteFirstNode()
+ , dll.search(27), dll.isEmpty(), dll.length(), frmdll.clear(), frmdll.length()
+ );

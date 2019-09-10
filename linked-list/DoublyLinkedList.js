@@ -144,6 +144,58 @@ class DoublyLinkedList{
             return undefined;
         }
     }
+    deleteLastNode() {
+        if (!this.tail) {
+            // No tail to delete.
+            return null;
+          }
+      
+          if (this.head === this.tail) {
+            // There is only one node in linked list.
+            const deletedTail = this.tail;
+            this.head = null;
+            this.tail = null;
+      
+            return deletedTail;
+          }
+      
+          // If there are many nodes in linked list...
+          const deletedTail = this.tail;
+      
+          this.tail = this.tail.previous;
+          this.tail = null;
+      
+          return deletedTail;
+    }
+    deleteFirstNode() {
+            if (!this.head) {
+              return null;
+            }
+        
+            const deletedHead = this.head;
+        
+            if (this.head.next) {
+              this.head = this.head.next;
+              this.head.previous = null;
+            } else {
+              this.head = null;
+              this.tail = null;
+            }
+        
+            return deletedHead;
+    }
+    search(data) { 
+        var count = 0; 
+        var current = this.head; 
+        while (current != null) { 
+            if (current.data === data) 
+                return count; 
+            count++; 
+            current = current.next; 
+        } 
+        return false; 
+    }
+    
     toArray()  {
         const nodes = [];
     
@@ -159,6 +211,22 @@ class DoublyLinkedList{
         values.forEach(value => this.add(value));
         return this.head;
       }
+      clear(){ 
+        this.head = null;
+        return true; 
+    } 
+   isEmpty(){ 
+        return this.length() === 0; 
+    } 
+   length() { 
+        let counter = 0;
+        let node = this.head;
+        while (node) {
+            counter++;
+            node = node.next;
+        }
+        return counter; 
+    } 
 }
 
 class Node{
