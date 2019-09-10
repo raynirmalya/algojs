@@ -20,6 +20,8 @@ const stoogeSort = require("./sort/stooge.js");
 const sleepSort = require("./sort/sleep.js");
 const combSort = require("./sort/comb.js");
 const beadSort = require("./sort/bead.js");
+const linearSearch = require("./search/linear.js");
+const binarySearch = require("./search/binary.js");
 
 // import bubbleSort from './bubble.js';
 
@@ -44,4 +46,7 @@ console.log('stoogeSort', stoogeSort([ 2, 4, 5, 3, 1 ]));
 // console.log('sleepSort', sleepSort([ 7,6,5,9,8,4,3,1,2,0 ]));
 console.log('combSort', combSort([ 7,6,5,9,8,4,3,1,2,0 ]));
 console.log('beadSort', beadSort([ 12, 11, 13, 5, 6, 7]));
+console.log('linearSearch', linearSearch([ -5, -10, 0, -3, 8, 5, -1, 10], 5));
+console.log('binarySearch', binarySearch([-5, -10, 0, -3, 8, 5, -1, 10], 5));
+
 
