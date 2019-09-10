@@ -26,6 +26,7 @@ const jumpSearch = require("./search/jump.js");
 const interpolationSearch = require("./search/interpolation.js");
 const exponentialSearch = require("./search/exponential.js");
 const fibonacciSearch = require("./search/fibonacci.js");
+const LinkedList = require("./linked-list/LinkedList.js");
 
 // import bubbleSort from './bubble.js';
 
@@ -56,4 +57,21 @@ console.log('jumpSearch', jumpSearch([-5, -10, 0, -3, 8, 5, -1, 10].sort(), 5));
 console.log('interpolationSearch', interpolationSearch([10, 12, 13, 16, 18, 19, 20, 21, 22, 23, 24, 33, 35, 42, 47], 18));
 console.log('exponentialSearch', exponentialSearch([10, 12, 13, 16, 18, 19, 20, 21, 22, 23, 24, 33, 35, 42, 47], 18));
 console.log('fibonacciSearch', fibonacciSearch([10, 12, 13, 16, 18, 19, 20, 21, 22, 23, 24, 33, 35, 42, 47], 18));
-
+let ll = new LinkedList();
+ll.insertAtBeginning(11);
+ll.add(4);
+ll.add(12);
+ll.add(91);
+ll.add(21);
+ll.add(88);
+ll.add(27);
+ll.add(45);
+ll.add(77);
+ll.insertAtEnd(34);
+ll.deleteNodeAt(1);
+ll.deleteNode(34);
+ll.deleteFirstNode();
+ll.deleteLastNode();
+let curr = ll.insertAt(8,3);
+console.log(JSON.stringify(curr));
+console.log(ll.indexOf(8), ll.length(), ll.isEmpty(), ll.getNodeAt(2), ll.getDataAt(2));
