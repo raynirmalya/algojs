@@ -22,6 +22,10 @@ const combSort = require("./sort/comb.js");
 const beadSort = require("./sort/bead.js");
 const linearSearch = require("./search/linear.js");
 const binarySearch = require("./search/binary.js");
+const jumpSearch = require("./search/jump.js");
+const interpolationSearch = require("./search/interpolation.js");
+const exponentialSearch = require("./search/exponential.js");
+const fibonacciSearch = require("./search/fibonacci.js");
 
 // import bubbleSort from './bubble.js';
 
@@ -48,5 +52,8 @@ console.log('combSort', combSort([ 7,6,5,9,8,4,3,1,2,0 ]));
 console.log('beadSort', beadSort([ 12, 11, 13, 5, 6, 7]));
 console.log('linearSearch', linearSearch([ -5, -10, 0, -3, 8, 5, -1, 10], 5));
 console.log('binarySearch', binarySearch([-5, -10, 0, -3, 8, 5, -1, 10], 5));
-
+console.log('jumpSearch', jumpSearch([-5, -10, 0, -3, 8, 5, -1, 10].sort(), 5));
+console.log('interpolationSearch', interpolationSearch([10, 12, 13, 16, 18, 19, 20, 21, 22, 23, 24, 33, 35, 42, 47], 18));
+console.log('exponentialSearch', exponentialSearch([10, 12, 13, 16, 18, 19, 20, 21, 22, 23, 24, 33, 35, 42, 47], 18));
+console.log('fibonacciSearch', fibonacciSearch([10, 12, 13, 16, 18, 19, 20, 21, 22, 23, 24, 33, 35, 42, 47], 18));
 
