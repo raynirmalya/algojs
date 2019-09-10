@@ -1,7 +1,6 @@
 class LinkedList{
     constructor(){
         this.head = null;
-        this.size = 0;
     }
 }
 
@@ -13,16 +12,13 @@ class Node{
 }
 
 LinkedList.prototype.insertAtBeginning = (data) =>{
-        this.size = (!this.size? 0 : this.size);
         let newNode = new Node(data);
         newNode.next = this.head;
         this.head = newNode;
-        this.size++;  
         return this.head;
 }
 
 LinkedList.prototype.insertAtEnd = (data) =>{
-    this.size = (!this.size? 0 : this.size);
     let newNode = new Node(data);
     if(!this.head){
         this.head = newNode;
@@ -34,12 +30,10 @@ LinkedList.prototype.insertAtEnd = (data) =>{
         tail = tail.next;
     }
     tail.next = newNode;
-    this.size++; 
     return this.head;
 }
 
 LinkedList.prototype.add = (data) => { 
-    this.size = (!this.size? 0 : this.size);
     let newNode = new Node(data); 
     let current; 
     if (this.head == null) {
@@ -51,12 +45,10 @@ LinkedList.prototype.add = (data) => {
         } 
         current.next = newNode; 
     } 
-    this.size++; 
 } 
 
 LinkedList.prototype.insertAt = (data, index) => { 
-    this.size = (!this.size? 0 : this.size);
-    if (index > 0 && index > this.size) {
+    if (index > 0 && LinkedList.prototype.length() === 0) {
         return false; 
     } else { 
         let node = new Node(data); 
@@ -76,15 +68,13 @@ LinkedList.prototype.insertAt = (data, index) => {
             }  
             node.next = curr; 
             prev.next = node; 
-        } 
-        this.size++; 
+        }
     } 
     return this.head;
 } 
 
 LinkedList.prototype.deleteNodeAt = (index)  => { 
-    this.size = (!this.size? 0 : this.size);
-    if (index > 0 && index > this.size) {
+    if (index > 0 && LinkedList.prototype.length() === 0) {
         return -1; 
     } else { 
         let curr, prev, it = 0; 
@@ -100,13 +90,11 @@ LinkedList.prototype.deleteNodeAt = (index)  => {
             } 
             prev.next = curr.next; 
         } 
-        this.size--; 
         return this.head; 
     } 
 } 
 
 LinkedList.prototype.deleteNode = (data) =>{ 
-    this.size = (!this.size? 0 : this.size);
     var current = this.head; 
     var prev = null; 
     while (current != null) { 
@@ -116,7 +104,6 @@ LinkedList.prototype.deleteNode = (data) =>{
             } else { 
                 prev.next = current.next; 
             } 
-            this.size--; 
             return current.data; 
         } 
         prev = current; 
@@ -126,7 +113,6 @@ LinkedList.prototype.deleteNode = (data) =>{
 } 
 
 LinkedList.prototype.indexOf= (data) =>{ 
-    this.size = (!this.size? 0 : this.size);
     var count = 0; 
     var current = this.head; 
     while (current != null) { 
@@ -204,10 +190,20 @@ LinkedList.prototype.deleteLastNode = function(){
    previous.next = null;
    return this.head;
 }
+LinkedList.prototype.clear = ()=>{ 
+    this.head = null;
+    return true; 
+} 
 LinkedList.prototype.isEmpty = ()=>{ 
-    return this.size === 0; 
+    return LinkedList.prototype.length() === 0; 
 } 
 LinkedList.prototype.length = () => { 
-    return +this.size; 
+    let counter = 0;
+    let node = this.head;
+    while (node) {
+        counter++;
+        node = node.next;
+    }
+    return counter; 
 } 
 module.exports = LinkedList;

@@ -73,5 +73,6 @@ ll.deleteNode(34);
 ll.deleteFirstNode();
 ll.deleteLastNode();
 let curr = ll.insertAt(8,3);
+// ll.clear();
 console.log(JSON.stringify(curr));
 console.log(ll.indexOf(8), ll.length(), ll.isEmpty(), ll.getNodeAt(2), ll.getDataAt(2));
