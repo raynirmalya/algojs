@@ -254,62 +254,27 @@ class LinkedList{
         this.head = newNode;
         return this.head;
     }
-    sort() {
-    if (this.head.next === null) {
-        return this.head; 
-    }
-    let count = 0; 
-    let countList = this.head;
-    let leftPart = this.head; 
-    let leftPointer = this.head; 
-    let rightPart = null; 
-    let rightPointer = null; 
-    while (countList.next !== null) { 
-        count++; 
-        countList = countList.next; 
+    sort() { 
+        let current = this.head, index = null;  
+        let temp;        
+        if(this.head == null) {  
+            return;  
+        } else {  
+            while(current != null) {  
+                index = current.next;  
+                while(index != null) {  
+                    if(current.data > index.data) {  
+                        temp = current.data;  
+                        current.data = index.data;  
+                        index.data = temp;  
+                    }  
+                    index = index.next;  
+                }  
+                current = current.next;  
+            }      
+        }  
+        return this.head;
     } 
-    let mid = Math.floor(count / 2) 
-    let count2 = 0; 
-    while (count2 < mid) { 
-        count2++; 
-        leftPointer = leftPointer.next; 
-    } 
-
-    rightPart = new LinkedList(leftPointer.next); 
-    leftPointer.next = null; 
-    return this.merge(this.sort(leftPart),this.sort(rightPart.head)) ;
-} 
- 
-merge(left, right) { 
-    let result = new LinkedList() 
-    let resultPointer = result.head; 
-    let pointerLeft = left; 
-    let pointerRight = right;  
-    while (pointerLeft && pointerRight) { 
-        let tempNode = null; 
-        if (pointerLeft.node > pointerRight.node) { 
-            tempNode = pointerRight.node; 
-            pointerRight = pointerRight.next; 
-        } else { 
-            tempNode = pointerLeft.node 
-            pointerLeft = pointerLeft.next; 
-        } 
-
-        if (result.head == null) { 
-            result.head = new Node(tempNode); 
-            resultPointer = result.head;
-        } else { 
-            resultPointer.next = new Node(tempNode);
-            resultPointer = resultPointer.next;
-        } 
-    } 
-    resultPointer.next = pointerLeft; 
-    while (resultPointer.next) {
-        resultPointer = resultPointer.next;
-    }
-    resultPointer.next = pointerRight;
-     return result.head; 
-    }
 }
 
 class Node{
