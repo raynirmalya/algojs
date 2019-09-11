@@ -1,0 +1,34 @@
+{
+  "name": "algojs",
+  "version": "1.0.0",
+  "description": "Algorithms in javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raynirmalya/algojs.git"
+  },
+  "keywords": [
+    "Algorithms",
+    "Data",
+    "Structure",
+    "Algojs",
+    "JSundefined",
+    "Javascript",
+    "Collections",
+    "Sortig",
+    "in",
+    "javascript",
+    "Searching",
+    "in",
+    "Javascript"
+  ],
+  "author": "Nirmalya Roy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raynirmalya/algojs/issues"
+  },
+  "homepage": "https://github.com/raynirmalya/algojs#readme"
+}
