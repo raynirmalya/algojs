@@ -1,3 +1,4 @@
+const sortFn = require('../common/sort.js');
 class Stack {
     constructor() {
         this.top = null;
@@ -60,6 +61,9 @@ class Stack {
       isEmpty() {
         return this.length > 1;
       }
+      sort() { 
+        return sortFn(this.head);
+      } 
 }
 
 class Node {

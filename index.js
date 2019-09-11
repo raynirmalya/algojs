@@ -29,6 +29,7 @@ const fibonacciSearch = require("./search/fibonacci.js");
 const LinkedList = require("./collections/linked-list/LinkedList.js");
 const DoublyLinkedList = require("./collections/linked-list/DoublyLinkedList.js");
 const Stack = require("./collections/stack/stack.js");
+const Queue = require("./collections/queue/queue.js");
 
 // import bubbleSort from './bubble.js';
 
@@ -110,6 +111,14 @@ stack.pop();
 const res = stack.reverse();
 console.log(JSON.stringify(res));
 
+const queue = new Queue();
+queue.enqueue(31);
+queue.enqueue(5);
+queue.enqueue(81);
+queue.dequeue();
+
+const res1 = queue.enqueue(100);
+console.log(JSON.stringify(queue.sort()));
 // console.log(currdll, dll.getDataAt(1), dll.getNodeAt(1), ll.toArray(),
 //  '*****', frmdll.fromArray([1,2,3]), '00000', frmdll.deleteLastNode(), '1111', frmdll.deleteFirstNode()
 //  , dll.search(27), dll.isEmpty(), dll.length(), frmdll.clear(), frmdll.length()
