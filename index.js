@@ -30,6 +30,7 @@ const LinkedList = require("./collections/linked-list/LinkedList.js");
 const DoublyLinkedList = require("./collections/linked-list/DoublyLinkedList.js");
 const Stack = require("./collections/stack/stack.js");
 const Queue = require("./collections/queue/queue.js");
+const Deque = require("./collections/deque/deque.js");
 
 // import bubbleSort from './bubble.js';
 
@@ -119,6 +120,14 @@ queue.dequeue();
 
 const res1 = queue.enqueue(100);
 console.log(JSON.stringify(queue.sort()));
+
+const dq = new Deque();
+dq.add(5);
+dq.add(6);
+dq.add(7);
+dq.add(8);
+console.log(dq.add(9));
+
 // console.log(currdll, dll.getDataAt(1), dll.getNodeAt(1), ll.toArray(),
 //  '*****', frmdll.fromArray([1,2,3]), '00000', frmdll.deleteLastNode(), '1111', frmdll.deleteFirstNode()
 //  , dll.search(27), dll.isEmpty(), dll.length(), frmdll.clear(), frmdll.length()
