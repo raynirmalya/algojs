@@ -26,8 +26,9 @@ const jumpSearch = require("./search/jump.js");
 const interpolationSearch = require("./search/interpolation.js");
 const exponentialSearch = require("./search/exponential.js");
 const fibonacciSearch = require("./search/fibonacci.js");
-const LinkedList = require("./linked-list/LinkedList.js");
-const DoublyLinkedList = require("./linked-list/DoublyLinkedList.js");
+const LinkedList = require("./collections/linked-list/LinkedList.js");
+const DoublyLinkedList = require("./collections/linked-list/DoublyLinkedList.js");
+const Stack = require("./collections/stack/stack.js");
 
 // import bubbleSort from './bubble.js';
 
@@ -99,6 +100,16 @@ dll.reverse();
 let currdll = dll.add(230);
 let frmdll = new DoublyLinkedList();
 console.log(dll.sort());
+
+const stack = new Stack();
+stack.push(3);
+stack.push(5);
+stack.push(8);
+stack.pop();
+
+const res = stack.reverse();
+console.log(JSON.stringify(res));
+
 // console.log(currdll, dll.getDataAt(1), dll.getNodeAt(1), ll.toArray(),
 //  '*****', frmdll.fromArray([1,2,3]), '00000', frmdll.deleteLastNode(), '1111', frmdll.deleteFirstNode()
 //  , dll.search(27), dll.isEmpty(), dll.length(), frmdll.clear(), frmdll.length()
