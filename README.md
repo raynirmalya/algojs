@@ -2,7 +2,8 @@
  
  ### npm i @jsundefined/algojs
  
-
+ ## Algorithms:
+ 
  This is js library for algorithms related to data structure.
  Till now we have published below algorthims.
  
@@ -71,6 +72,7 @@ console.log('bubbleSort', indexOfSearchResult);
 import linearSearch from '@jsundefined/algojs/search/linear';
 let indexOfSearchResult = linearSearch([ -5, -10, 0, -3, 8, 5, -1, 10], 5); // if -1 means not found
 console.log('bubbleSort', indexOfSearchResult);
+```
 
  ### How to use search methods:
  
