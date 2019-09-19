@@ -1,7 +1,8 @@
  This is js library for algorithms related to data structure.
  Till now we have published below algorthims.
- #### Sorting
  
+ ### Sorting
+
 * Bead Sort	
 * Bitonic Sort
 * Bogo Sort	
@@ -27,5 +28,18 @@
 * Swap Sort
 * Tim Sort
  
-  #### Searching
-  
+### Searching
+
+ Binary
+ Exponential
+ Fibonacci
+ Interpolation
+ Jump
+ Linear
+ 
+ ### Collection
+ 
+ Queue
+ Deque
+ Linked List
+ Stack
