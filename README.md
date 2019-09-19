@@ -1,26 +1,31 @@
  This is js library for algorithms related to data structure.
  Till now we have published below algorthims.
  #### Sorting
- * Bubble Sort.
- * Selection Sort.
- * Insertion Sort.
- * Quick Sort.
- * Heap Sort.
- * Merge Sort.
- * Counting Sort.
- * Cycle Sort.
- * Tim Sort.
- * Shell Sort.
- * Pigeonhole Sort.
- * Bucket Sort.
- * Radix Sort.
- * Pancake Sort
- * Bitonic Sort
- * Cocktail Sort
- * Gnome Sort
- * Comb Sort
- * Stooge Sort
- * Bead Sort
+ 
+* Bead Sort	
+* Bitonic Sort
+* Bogo Sort	
+* Bubble Sort
+* Bucket Sort
+* Cocktail Sort
+* Comb Sort
+* Count Sort
+* Cycle Sort
+* Gnome Sort
+* Heap Sort
+* Insertion Sort
+* Merge Sort
+* Pancake Sort
+* Pigeonhole Sort
+* Quick Sort
+* Radix Sort
+* Selection Sort
+* Shell Sort
+* Sleep Sort
+* Stooge Sort
+* Strand Sort
+* Swap Sort
+* Tim Sort
  
   #### Searching
   
