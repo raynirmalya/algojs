@@ -1,13 +1,13 @@
- ## Installation:
+## Installation:
  
- ### npm i @jsundefined/algojs
+### npm i @jsundefined/algojs
  
- ## Algorithms:
+## Algorithms:
  
  This is js library for algorithms related to data structure.
  Till now we have published below algorthims.
  
- ## Sorting
+## Sorting
 
 * Bead Sort	
 * Bitonic Sort
@@ -59,9 +59,9 @@ console.log('bubbleSort', sortedArr);
  * Jump
  * Linear
  
-  ## How to use search methods:
+## How to use search methods:
   
- ### Javascript:
+### Javascript:
 
 ```javascript
 let linearSearch = require('@jsundefined/algojs/search/linear.js');
@@ -77,16 +77,16 @@ console.log('bubbleSort', indexOfSearchResult);
 ```
 
 
- ## Collection
+## Collection
  
  * Queue
  * Deque
  * Linked List
  * Stack
 
- ## How to use collection methods:
+## How to use collection methods:
  
-  ### Javascript:
+### Javascript:
 
 ```javascript
 let LinkedList = require('@jsundefined/algojs/collections/linked-list/LinkedList.js');

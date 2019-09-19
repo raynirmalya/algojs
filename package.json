@@ -1,6 +1,6 @@
 {
   "name": "@jsundefined/algojs",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Algorithms in javascript",
   "main": "index.js",
   "scripts": {
@@ -24,7 +24,7 @@
     "Javascript",
 	"beadsort",
 	"bitonicsort",
-	"bogosort	",
+	"bogosort",
 	"bubblesort",
 	"bucketsort",
 	"cocktailsort",

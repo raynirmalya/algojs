@@ -28,9 +28,9 @@ const exponentialSearch = require("./search/exponential.js");
 const fibonacciSearch = require("./search/fibonacci.js");
 const LinkedList = require("./collections/linked-list/LinkedList.js");
 const DoublyLinkedList = require("./collections/linked-list/DoublyLinkedList.js");
-const Stack = require("./collections/stack/stack.js");
-const Queue = require("./collections/queue/queue.js");
-const Deque = require("./collections/deque/deque.js");
+const Stack = require("./collections/stack");
+const Queue = require("./collections/queue");
+const Deque = require("./collections/deque");
 
 // import bubbleSort from './bubble.js';
 
