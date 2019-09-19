@@ -34,23 +34,23 @@
 * Swap Sort
 * Tim Sort
 
-### How to use sort methods:
+## How to use sort methods:
 
-#### Javascript:
+### Javascript:
 
 ```javascript
 let bubbleSort = require('@jsundefined/algojs/sort/bubble.js');
 let sortedArr = bubbleSort([12, 11, 13, 5, 6, 7]);
 console.log('bubbleSort', sortedArr);
 ```
-#### Typescript / Angular:
+### Typescript / Angular:
 
 ```javascript
 import bubbleSort from '@jsundefined/algojs/sort/bubble';
 let sortedArr = bubbleSort([12, 11, 13, 5, 6, 7]);
 console.log('bubbleSort', sortedArr);
  ````
-### Searching
+## Searching
 
  * Binary
  * Exponential
@@ -59,14 +59,16 @@ console.log('bubbleSort', sortedArr);
  * Jump
  * Linear
  
- #### Javascript:
+  ## How to use search methods:
+  
+ ### Javascript:
 
 ```javascript
 let linearSearch = require('@jsundefined/algojs/search/linear.js');
 let indexOfSearchResult = linearSearch([ -5, -10, 0, -3, 8, 5, -1, 10], 5); // if -1 means not found
 console.log('bubbleSort', indexOfSearchResult);
 ```
-#### Typescript / Angular:
+### Typescript / Angular:
 
 ```javascript
 import linearSearch from '@jsundefined/algojs/search/linear';
@@ -74,18 +76,17 @@ let indexOfSearchResult = linearSearch([ -5, -10, 0, -3, 8, 5, -1, 10], 5); // i
 console.log('bubbleSort', indexOfSearchResult);
 ```
 
- ### How to use search methods:
- 
- ### Collection
+
+ ## Collection
  
  * Queue
  * Deque
  * Linked List
  * Stack
 
- ### How to use collection methods:
+ ## How to use collection methods:
  
-  #### Javascript:
+  ### Javascript:
 
 ```javascript
 let LinkedList = require('@jsundefined/algojs/collections/linked-list/LinkedList.js');
@@ -110,7 +111,7 @@ let curr = ll.swap(2,5);
 console.log(JSON.stringify(curr));
 console.log(JSON.stringify(ll.sort()));
 ```
-#### Typescript / Angular:
+### Typescript / Angular:
 
 ```javascript
 import LinkedList from '@jsundefined/algojs/collections/linked-list/LinkedList';
