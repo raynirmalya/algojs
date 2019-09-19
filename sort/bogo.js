@@ -1,6 +1,5 @@
 
 const swap = require("./swap.js");
-// import swap from './swap.js'
 function shuffle(a) { 
     for (let i=0; i < a.length; i++) { 
         console.log('1112',a);
@@ -25,5 +24,5 @@ const bogoSort = (arr)=>{
     }
     return arr;
 }
-// export default bogoSort;
+
 module.exports = bogoSort;

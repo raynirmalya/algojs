@@ -1,5 +1,5 @@
 const swap = require("./swap.js");
-// import swap from './swap.js'
+
 const countSort = (arr)=>{
     const min = Math.min(...arr);
     const max = Math.max(...arr);
@@ -20,5 +20,5 @@ const countSort = (arr)=>{
     }
     return arr;
 }
-// export default countSort;
+
 module.exports = countSort;

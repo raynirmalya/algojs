@@ -1,5 +1,5 @@
 const swap = require("./swap.js");
-// import swap from './swap.js'
+
 function isArraySorted(arr) {
     var sorted = true;
     for (var i = 0; i < arr.length - 1; i++) {
@@ -30,5 +30,5 @@ const combSort = (arr) => {
     }
     return arr;
 }
-// export default combSort;
+
 module.exports = combSort;

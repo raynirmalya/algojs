@@ -5,5 +5,4 @@ const swap = (arr, i, j)=>{
     return arr;
 }
 
-// export default swap;
 module.exports = swap;

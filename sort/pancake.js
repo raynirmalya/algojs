@@ -1,5 +1,4 @@
 const swap = require("./swap.js");
-// import swap from './swap.js'
 
 const pancakeSort = (arr)=>{
     for (let i = arr.length - 1; i >= 1; i--) {
@@ -30,5 +29,5 @@ const pancakeSort = (arr)=>{
     }
     return arr;
 }
-// export default pancakeSort;
+
 module.exports = pancakeSort;

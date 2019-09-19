@@ -1,5 +1,4 @@
 const swap = require("./swap.js");
-// import swap from './swap.js'
 const bitonicSort = (arr)=>{
     const up = 1;
     const len = arr.length
@@ -38,5 +37,4 @@ function sort(arr, low, cnt, dir) {
     return arr;
 } 
 
-// export default bitonicSort;
 module.exports = bitonicSort;

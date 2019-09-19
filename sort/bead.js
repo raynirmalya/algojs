@@ -5,8 +5,7 @@ const beadSort = (arr)=>{
                 max=arr[i];
             }
         }
-		//Set up abacus
-		let grid=new Array(arr.length) // [max];
+		let grid=new Array(arr.length)
 		let levelcount=new Array(max);
 		for(let i=0;i<max;i++){
 			levelcount[i]=0;
@@ -35,5 +34,4 @@ const beadSort = (arr)=>{
  
 		return sorted;
 }
-// export default beadSort;
 module.exports = beadSort;

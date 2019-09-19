@@ -1,7 +1,7 @@
  This is js library for algorithms related to data structure.
  Till now we have published below algorthims.
  
- ### Sorting
+ ## Sorting
 
 * Bead Sort	
 * Bitonic Sort
@@ -27,7 +27,23 @@
 * Strand Sort
 * Swap Sort
 * Tim Sort
- 
+
+### How to use sort methods:
+
+#### Javascript:
+
+```javascript
+let bubbleSort = require('@jsundefined/algojs/sort/bubble.js');
+let sortedArr = bubbleSort([12, 11, 13, 5, 6, 7]);
+console.log('bubbleSort', sortedArr);
+```
+#### Typescript / Angular:
+
+```javascript
+import bubbleSort from '@jsundefined/algojs/sort/bubble'
+let sortedArr = bubbleSort([12, 11, 13, 5, 6, 7]);
+console.log('bubbleSort', sortedArr);
+ ````
 ### Searching
 
  Binary
@@ -36,6 +52,8 @@
  Interpolation
  Jump
  Linear
+
+ ### How to use search methods:
  
  ### Collection
  
@@ -43,3 +61,5 @@
  Deque
  Linked List
  Stack
+
+ ### How to use collection methods:

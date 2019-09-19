@@ -14,5 +14,4 @@ const insertionSort = (arr)=>{
     return arr;
   } 
 
-// export default insertionSort;
 module.exports = insertionSort;

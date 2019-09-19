@@ -1,5 +1,4 @@
 const swap = require("./swap.js");
-// import swap from './swap.js'
 
 function getPartitionIndex(arr, low, high) { 
     const pivot = arr[high];  
@@ -28,7 +27,6 @@ const quickSort = (arr) => {
       return arr;
   } 
 
-// export default quickSort;
 module.exports = quickSort;
 
   

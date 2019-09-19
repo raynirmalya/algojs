@@ -1,5 +1,5 @@
 const swap = require("./swap.js");
-// import swap from './swap.js'
+
 const stoogeSort = (arr, i, j)=> {
     if (j === undefined) {
         j = arr.length - 1;
@@ -21,5 +21,5 @@ const stoogeSort = (arr, i, j)=> {
     }
     return arr;
 }
-// export default stoogeSort;
+
 module.exports = stoogeSort;

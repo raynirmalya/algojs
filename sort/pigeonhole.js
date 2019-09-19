@@ -1,5 +1,4 @@
 const swap = require("./swap.js");
-// import swap from './swap.js'
 
 const pholeSort = (arr) => {  
     let min = Math.min(...arr); 
@@ -17,5 +16,4 @@ const pholeSort = (arr) => {
     return arr;
 } 
 
-// export default pholeSort;
 module.exports = pholeSort;

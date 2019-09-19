@@ -1,7 +1,7 @@
 
 
 const swap = require("./swap.js");
-// import swap from './swap.js'
+
 const cocktailSort = (arr)=>{
     let swapped = true; 
     let start = 0; 
@@ -33,5 +33,4 @@ const cocktailSort = (arr)=>{
       return arr;
   } 
 
-// export default cocktailSort;
 module.exports = cocktailSort;

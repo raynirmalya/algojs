@@ -14,5 +14,4 @@ const bucketSort = (arr) => {
     return sortedArr;
 } 
 
-// export default bucketSort;
 module.exports = bucketSort;

@@ -1,5 +1,5 @@
 const swap = require("./swap.js");
-// import swap from './swap.js'
+
 function createHeap(arr, len, i) {
         let root = i;
         let l = 2*i + 1; 
@@ -29,7 +29,6 @@ const heapSort = (arr) => {
     return arr;
 } 
 
-// export default heapSort;
 module.exports = heapSort;
 
   

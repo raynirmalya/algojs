@@ -1,5 +1,5 @@
 const swap = require("./swap.js");
-// import swap from './swap.js'
+
 const sleepSort = (arr)=>{
     let sortedArr = [];
     arr.forEach( (n) => {
@@ -7,5 +7,5 @@ const sleepSort = (arr)=>{
 	});
     return sortedArr;
 }
-// export default sleepSort;
+
 module.exports = sleepSort;

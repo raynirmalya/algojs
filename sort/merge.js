@@ -40,5 +40,4 @@ const mergeSort = (arr) => {
     return arr;
   } 
 
-// export default mergeSort;
 module.exports = mergeSort;

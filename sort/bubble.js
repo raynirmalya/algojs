@@ -1,5 +1,5 @@
 const swap = require("./swap.js");
-// import swap from './swap.js'
+
 const bubbleSort = (arr)=>{
     let i, j, isSwapped; 
     for (i = 0; i < arr.length-1; i++) { 
@@ -17,5 +17,5 @@ const bubbleSort = (arr)=>{
     } 
     return arr;
 }
-// export default bubbleSort;
+
 module.exports = bubbleSort;

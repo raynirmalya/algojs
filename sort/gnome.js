@@ -1,5 +1,5 @@
 const swap = require("./swap.js");
-// import swap from './swap.js'
+
 const gnomeSort = (arr)=>{
     let index = 0, n = arr.length; 
     while (index < n) { 
@@ -15,5 +15,5 @@ const gnomeSort = (arr)=>{
     } 
     return arr;
 }
-// export default gnomeSort;
+
 module.exports = gnomeSort;

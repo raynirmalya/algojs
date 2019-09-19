@@ -1,5 +1,4 @@
 const swap = require("./swap.js");
-// import swap from './swap.js'
 
 const cycleSort = (arr) => {  
     let writes = 0, n = arr.length; 
@@ -49,5 +48,4 @@ const cycleSort = (arr) => {
     return arr;
 } 
 
-// export default cycleSort;
 module.exports = cycleSort;
