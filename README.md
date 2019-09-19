@@ -1,3 +1,8 @@
+ ## Installation:
+ 
+ ### npm i @jsundefined/algojs
+ 
+
  This is js library for algorithms related to data structure.
  Till now we have published below algorthims.
  
@@ -40,26 +45,91 @@ console.log('bubbleSort', sortedArr);
 #### Typescript / Angular:
 
 ```javascript
-import bubbleSort from '@jsundefined/algojs/sort/bubble'
+import bubbleSort from '@jsundefined/algojs/sort/bubble';
 let sortedArr = bubbleSort([12, 11, 13, 5, 6, 7]);
 console.log('bubbleSort', sortedArr);
  ````
 ### Searching
 
- Binary
- Exponential
- Fibonacci
- Interpolation
- Jump
- Linear
+ * Binary
+ * Exponential
+ * Fibonacci
+ * Interpolation
+ * Jump
+ * Linear
+ 
+ #### Javascript:
+
+```javascript
+let linearSearch = require('@jsundefined/algojs/search/linear.js');
+let indexOfSearchResult = linearSearch([ -5, -10, 0, -3, 8, 5, -1, 10], 5); // if -1 means not found
+console.log('bubbleSort', indexOfSearchResult);
+```
+#### Typescript / Angular:
+
+```javascript
+import linearSearch from '@jsundefined/algojs/search/linear';
+let indexOfSearchResult = linearSearch([ -5, -10, 0, -3, 8, 5, -1, 10], 5); // if -1 means not found
+console.log('bubbleSort', indexOfSearchResult);
 
  ### How to use search methods:
  
  ### Collection
  
- Queue
- Deque
- Linked List
- Stack
+ * Queue
+ * Deque
+ * Linked List
+ * Stack
 
  ### How to use collection methods:
+ 
+  #### Javascript:
+
+```javascript
+let LinkedList = require('@jsundefined/algojs/collections/linked-list/LinkedList.js');
+let ll = new LinkedList();
+ll.insertAtBeginning(11);
+ll.add(4);
+ll.add(12);
+ll.add(91);
+ll.add(21);
+ll.add(88);
+ll.add(27);
+ll.add(45);
+ll.add(77);
+ll.insertAtEnd(34);
+ll.deleteNodeAt(1);
+ll.deleteNode(34);
+ll.deleteFirstNode();
+ll.deleteLastNode();
+ll.insertAt(8,3);
+ll.reverse();
+let curr = ll.swap(2,5);
+console.log(JSON.stringify(curr));
+console.log(JSON.stringify(ll.sort()));
+```
+#### Typescript / Angular:
+
+```javascript
+import LinkedList from '@jsundefined/algojs/collections/linked-list/LinkedList';
+let ll = new LinkedList();
+ll.insertAtBeginning(11);
+ll.add(4);
+ll.add(12);
+ll.add(91);
+ll.add(21);
+ll.add(88);
+ll.add(27);
+ll.add(45);
+ll.add(77);
+ll.insertAtEnd(34);
+ll.deleteNodeAt(1);
+ll.deleteNode(34);
+ll.deleteFirstNode();
+ll.deleteLastNode();
+ll.insertAt(8,3);
+ll.reverse();
+let curr = ll.swap(2,5);
+console.log(JSON.stringify(curr));
+console.log(JSON.stringify(ll.sort()));
+```
