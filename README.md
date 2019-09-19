@@ -1,5 +1,6 @@
  This is js library for algorithms related to data structure.
  Till now we have published below algorthims.
+ #### Sorting
  * Bubble Sort.
  * Selection Sort.
  * Insertion Sort.
@@ -20,3 +21,6 @@
  * Comb Sort
  * Stooge Sort
  * Bead Sort
+ 
+  #### Searching
+  
