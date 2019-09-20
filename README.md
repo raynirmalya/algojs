@@ -118,3 +118,40 @@ console.log(JSON.stringify(ll.sort()));
 |insertAt | inserting data at particular index of linked list| 2 parameters, (data to be added, index) | returns full list|
 |deleteNodeAt | deleting data at particular index of linked list| 1 parameter, index | returns deleted node|
 |deleteNode | deleting data of linked list| 1 parameter, data | returns full list|
+|deleteFirstNode | deleting first node of linked list| no parameters | returns full list|
+|deleteLastNode | deleting last data of linked list| no parameters | returns full list|
+|indexOf | indexOf a particular data in linked list| 1 parameter, data | returns index else -1 |
+|search | index of a particular data in linked list| 1 parameter, data | returns index else false|
+|getDataAt | getting data of a node at particular index of linked list| 1 parameter, index | returns data else null|
+|getNodeAt | getting node at particular index of linked list| 1 parameter, index | returns data else null|
+|clear | clears full linked list| no parameters | returns true |
+|isEmpty | checks linked list is empty or not| no parameters | returns true or false |
+|length | get length of a linked list| no parameters | returns length |
+|reverse | reverse the linked list| no parameters | returns full list |
+|swap | swap two nodes the linked list| 2 parameters, 2 nodes index | returns full list |
+|toArray | creates array from linked list| no parameters | returns array |
+|fromArray | creates linked list from array| no parameters | returns linked list |
+|sort | sorts linked list| no parameters | returns linked list |
+
+
+## Doubly Linked List
+|Methods | Uses| Paramaters | Return|
+|---     | ---|---     | ---|
+|add | inserting at end of linked list| one parameter, data to be added | returns full list|
+|insertAt | inserting data at particular index of linked list| 2 parameters, (data to be added, index) | returns full list|
+|deleteNodeAt | deleting data at particular index of linked list| 1 parameter, index | returns deleted node|
+|deleteNode | deleting data of linked list| 1 parameter, data | returns full list|
+|deleteFirstNode | deleting first node of linked list| no parameters | returns full list|
+|deleteLastNode | deleting last data of linked list| no parameters | returns full list|
+|search | index of a particular data in linked list| 1 parameter, data | returns index else false|
+|getDataAt | getting data of a node at particular index of linked list| 1 parameter, index | returns data else null|
+|getNodeAt | getting node at particular index of linked list| 1 parameter, index | returns data else null|
+|clear | clears full linked list| no parameters | returns true |
+|isEmpty | checks linked list is empty or not| no parameters | returns true or false |
+|length | get length of a linked list| no parameters | returns length |
+|reverse | reverse the linked list| no parameters | returns full list |
+|swap | swap two nodes the linked list| 2 parameters, 2 nodes index | returns full list |
+|toArray | creates array from linked list| no parameters | returns array |
+|fromArray | creates linked list from array| no parameters | returns linked list |
+|sort | sorts linked list| no parameters | returns linked list |
+
