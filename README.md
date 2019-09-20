@@ -174,7 +174,7 @@ console.log(JSON.stringify(ll.sort()));
 ## Stack:
 |Methods | Uses| Paramaters | Return|
 |---     | ---|---     | ---|
-|push | push data into stack| one parameter, data | returns true |
+|push | push data into stack| one parameter, data | returns full data |
 |pop | pop from stack| no parameters | returns data or false |
 |peek | peeks from stack| no parameters | returns data or null |
 |clear | clears full stack| no parameters | returns true |
@@ -188,19 +188,18 @@ console.log(JSON.stringify(ll.sort()));
 ## Queue:
 |Methods | Uses| Paramaters | Return|
 |---     | ---|---     | ---|
-|enqueue | push data into queue| one parameter, data | returns true |
+|enqueue | push data into queue| one parameter, data | returns full data |
 |dequeue | pop from queue| no parameters | returns data or false |
 |peek | peeks from queue| no parameters | returns data or null |
 |isEmpty | checks queue is empty or not| no parameters | returns true or false |
 |length | get length of a queue| no parameters | returns length |
 |sort | sorts queue| no parameters | returns queue |
 
-## deque:
+## Deque:
 |Methods | Uses| Paramaters | Return|
 |---     | ---|---     | ---|
-|enqueue | push data into queue| one parameter, data | returns true |
-|dequeue | pop from queue| no parameters | returns data or false |
-|peek | peeks from queue| no parameters | returns data or null |
-|isEmpty | checks queue is empty or not| no parameters | returns true or false |
-|length | get length of a queue| no parameters | returns length |
-|sort | sorts queue| no parameters | returns queue |
+|add or offer | add data into queue| one parameter, data | returns full list |
+|addFirst or offerFirst | add first postion of queue| one parameter, data | returns full list |
+|addLast or offerLast| add end of queue| one parameter, data | returns full list |
+|removeFirst | removes from first| no parameters | returns full list |
+|removeLast | removes from last| no parameters | returns full list |
