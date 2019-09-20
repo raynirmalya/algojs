@@ -2,6 +2,21 @@
  
  This is js library for algorithms related to data structure.
  Till now we have published below algorthims.
+
+## How to use all methods through AlgoJS class:
+
+```javascript
+let Algojs = require('@jsundefined/algojs');
+let sortedArr = Algojs.bubbleSort([12, 11, 13, 5, 6, 7]);
+console.log('bubbleSort', sortedArr);
+```
+### Typescript / Angular:
+
+```javascript
+import Algojs from '@jsundefined/algojs';
+let sortedArr = Algojs.bubbleSort([12, 11, 13, 5, 6, 7]);
+console.log('bubbleSort', sortedArr);
+ ```
  
 ## Sorting
 
