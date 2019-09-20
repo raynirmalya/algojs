@@ -31,6 +31,7 @@ const DoublyLinkedList = require("./collections/linked-list/DoublyLinkedList.js"
 const Stack = require("./collections/stack");
 const Queue = require("./collections/queue");
 const Deque = require("./collections/deque");
+const Matrices = require("./math/matrices");
 
 function AlgoJs (){
 }
@@ -68,5 +69,6 @@ AlgoJs.DoublyLinkedList = DoublyLinkedList;
 AlgoJs.Stack = Stack;
 AlgoJs.Queue = Queue;
 AlgoJs.Deque = Deque;
+AlgoJs.Matrices = Matrices;
 
 module.exports = AlgoJs;
