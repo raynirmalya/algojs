@@ -31,7 +31,7 @@ const DoublyLinkedList = require("./collections/linked-list/DoublyLinkedList.js"
 const Stack = require("./collections/stack");
 const Queue = require("./collections/queue");
 const Deque = require("./collections/deque");
-const Matrices = require("./math/matrices");
+const Matrices = require("./math/matrix");
 
 function AlgoJs (){
 }

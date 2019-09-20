@@ -31,7 +31,7 @@ const DoublyLinkedList = require("./collections/linked-list/DoublyLinkedList.js"
 const Stack = require("./collections/stack");
 const Queue = require("./collections/queue");
 const Deque = require("./collections/deque");
-const Matrices = require("./math/matrices");
+const Matrix = require("./math/matrix");
 const AlgoJs = require("./algo");
 
 console.log('bubble', AlgoJs.bubbleSort([12, 11, 13, 5, 6, 7]));
@@ -136,10 +136,10 @@ console.log(dq.add(9));
 //  , dll.search(27), dll.isEmpty(), dll.length(), frmdll.clear(), frmdll.length()
 //  );
 
-const matrices1 = new Matrices([[4,5,6],[3,4,1],[1,2,3]]);
-const matrices2 = new Matrices([[2,0,3],[2,3,1],[1,1,1]]);
-const matrices3 = new Matrices([[1,0,0],[0,1,0],[0,0,1]]);
+const matrices1 = new Matrix([[4,5,6],[3,4,1],[1,2,3]]);
+const matrices2 = new Matrix([[2,0,3],[2,3,1],[1,1,1]]);
+const matrices3 = new Matrix([[1,0,0],[0,1,0],[0,0,1]]);
 console.log(matrices1.get(), matrices2.get(), matrices1.add(matrices2));
 console.log('sum1', matrices1.add(matrices2));
 console.log('sum2', matrices1.sub(matrices2.get()));
-console.log(matrices3.isIdentityMatrix(), matrices1.isIdentityMatrix());
+console.log(matrices3.isIdentityMatrix(), matrices1.isIdentityMatrix(), matrices3.isSparseMatrix());
