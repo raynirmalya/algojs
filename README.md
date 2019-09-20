@@ -127,79 +127,79 @@ console.log(JSON.stringify(ll.sort()));
 ## Single Linked List:
 |Methods | Uses| Paramaters | Return|
 |---     | ---|---     | ---|
-|add | inserting at end of linked list| one parameter, data to be added | returns full list|
-|insertAtEnd | inserting data at end of linked list| one parameter, data to be added | returns full list|
-|insertAtStart | inserting data at start of linked list| one parameter, data to be added | returns full list|
-|insertAt | inserting data at particular index of linked list| 2 parameters, (data to be added, index) | returns full list|
-|deleteNodeAt | deleting data at particular index of linked list| 1 parameter, index | returns deleted node|
-|deleteNode | deleting data of linked list| 1 parameter, data | returns full list|
-|deleteFirstNode | deleting first node of linked list| no parameters | returns full list|
-|deleteLastNode | deleting last data of linked list| no parameters | returns full list|
-|indexOf | indexOf a particular data in linked list| 1 parameter, data | returns index else -1 |
-|search | index of a particular data in linked list| 1 parameter, data | returns index else false|
-|getDataAt | getting data of a node at particular index of linked list| 1 parameter, index | returns data else null|
-|getNodeAt | getting node at particular index of linked list| 1 parameter, index | returns data else null|
-|clear | clears full linked list| no parameters | returns true |
-|isEmpty | checks linked list is empty or not| no parameters | returns true or false |
-|length | get length of a linked list| no parameters | returns length |
-|reverse | reverse the linked list| no parameters | returns full list |
-|swap | swap two nodes the linked list| 2 parameters, 2 nodes index | returns full list |
-|toArray | creates array from linked list| no parameters | returns array |
-|fromArray | creates linked list from array| no parameters | returns linked list |
-|sort | sorts linked list| no parameters | returns linked list |
+|add | inserting at end of linked list| one parameter, data to be added |  full list|
+|insertAtEnd | inserting data at end of linked list| one parameter, data to be added |  full list|
+|insertAtStart | inserting data at start of linked list| one parameter, data to be added |  full list|
+|insertAt | inserting data at particular index of linked list| 2 parameters, (data to be added, index) |  full list|
+|deleteNodeAt | deleting data at particular index of linked list| 1 parameter, index |  deleted node|
+|deleteNode | deleting data of linked list| 1 parameter, data |  full list|
+|deleteFirstNode | deleting first node of linked list| no parameters |  full list|
+|deleteLastNode | deleting last data of linked list| no parameters |  full list|
+|indexOf | indexOf a particular data in linked list| 1 parameter, data |  index else -1 |
+|search | index of a particular data in linked list| 1 parameter, data |  index else false|
+|getDataAt | getting data of a node at particular index of linked list| 1 parameter, index |  data else null|
+|getNodeAt | getting node at particular index of linked list| 1 parameter, index |  data else null|
+|clear | clears full linked list| no parameters |  true |
+|isEmpty | checks linked list is empty or not| no parameters |  true or false |
+|length | get length of a linked list| no parameters |  length |
+|reverse | reverse the linked list| no parameters |  full list |
+|swap | swap two nodes the linked list| 2 parameters, 2 nodes index |  full list |
+|toArray | creates array from linked list| no parameters |  array |
+|fromArray | creates linked list from array| no parameters |  linked list |
+|sort | sorts linked list| no parameters |  linked list |
 
 
 ## Doubly Linked List:
 |Methods | Uses| Paramaters | Return|
 |---     | ---|---     | ---|
-|add | inserting at end of linked list| one parameter, data to be added | returns full list|
-|insertAt | inserting data at particular index of linked list| 2 parameters, (data to be added, index) | returns full list|
-|deleteNodeAt | deleting data at particular index of linked list| 1 parameter, index | returns deleted node|
-|deleteNode | deleting data of linked list| 1 parameter, data | returns full list|
-|deleteFirstNode | deleting first node of linked list| no parameters | returns full list|
-|deleteLastNode | deleting last data of linked list| no parameters | returns full list|
-|search | index of a particular data in linked list| 1 parameter, data | returns index else false|
-|getDataAt | getting data of a node at particular index of linked list| 1 parameter, index | returns data else null|
-|getNodeAt | getting node at particular index of linked list| 1 parameter, index | returns data else null|
-|clear | clears full linked list| no parameters | returns true |
-|isEmpty | checks linked list is empty or not| no parameters | returns true or false |
-|length | get length of a linked list| no parameters | returns length |
-|reverse | reverse the linked list| no parameters | returns full list |
-|swap | swap two nodes the linked list| 2 parameters, 2 nodes index | returns full list |
-|toArray | creates array from linked list| no parameters | returns array |
-|fromArray | creates linked list from array| no parameters | returns linked list |
-|sort | sorts linked list| no parameters | returns linked list |
+|add | inserting at end of linked list| one parameter, data to be added |  full list|
+|insertAt | inserting data at particular index of linked list| 2 parameters, (data to be added, index) |  full list|
+|deleteNodeAt | deleting data at particular index of linked list| 1 parameter, index |  deleted node|
+|deleteNode | deleting data of linked list| 1 parameter, data |  full list|
+|deleteFirstNode | deleting first node of linked list| no parameters |  full list|
+|deleteLastNode | deleting last data of linked list| no parameters |  full list|
+|search | index of a particular data in linked list| 1 parameter, data |  index else false|
+|getDataAt | getting data of a node at particular index of linked list| 1 parameter, index |  data else null|
+|getNodeAt | getting node at particular index of linked list| 1 parameter, index |  data else null|
+|clear | clears full linked list| no parameters |  true |
+|isEmpty | checks linked list is empty or not| no parameters |  true or false |
+|length | get length of a linked list| no parameters |  length |
+|reverse | reverse the linked list| no parameters |  full list |
+|swap | swap two nodes the linked list| 2 parameters, 2 nodes index |  full list |
+|toArray | creates array from linked list| no parameters |  array |
+|fromArray | creates linked list from array| no parameters |  linked list |
+|sort | sorts linked list| no parameters |  linked list |
 
 
 ## Stack:
 |Methods | Uses| Paramaters | Return|
 |---     | ---|---     | ---|
-|push | push data into stack| one parameter, data | returns full data |
-|pop | pop from stack| no parameters | returns data or false |
-|peek | peeks from stack| no parameters | returns data or null |
-|clear | clears full stack| no parameters | returns true |
-|isEmpty | checks stack is empty or not| no parameters | returns true or false |
-|length | get length of a stack| no parameters | returns length |
-|reverse | reverse the stack| no parameters | returns full stack |
-|search | index of a particular data in stack| 1 parameter, data | returns index else false|
-|sort | sorts stack| no parameters | returns stack |
+|push | push data into stack| one parameter, data |  full data |
+|pop | pop from stack| no parameters |  data or false |
+|peek | peeks from stack| no parameters |  data or null |
+|clear | clears full stack| no parameters |  true |
+|isEmpty | checks stack is empty or not| no parameters |  true or false |
+|length | get length of a stack| no parameters |  length |
+|reverse | reverse the stack| no parameters |  full stack |
+|search | index of a particular data in stack| 1 parameter, data |  index else false|
+|sort | sorts stack| no parameters |  stack |
 
 
 ## Queue:
 |Methods | Uses| Paramaters | Return|
 |---     | ---|---     | ---|
-|enqueue | push data into queue| one parameter, data | returns full data |
-|dequeue | pop from queue| no parameters | returns data or false |
-|peek | peeks from queue| no parameters | returns data or null |
-|isEmpty | checks queue is empty or not| no parameters | returns true or false |
-|length | get length of a queue| no parameters | returns length |
-|sort | sorts queue| no parameters | returns queue |
+|enqueue | push data into queue| one parameter, data |  full data |
+|dequeue | pop from queue| no parameters |  data or false |
+|peek | peeks from queue| no parameters |  data or null |
+|isEmpty | checks queue is empty or not| no parameters |  true or false |
+|length | get length of a queue| no parameters |  length |
+|sort | sorts queue| no parameters |  queue |
 
 ## Deque:
 |Methods | Uses| Paramaters | Return|
 |---     | ---|---     | ---|
-|add or offer | add data into queue| one parameter, data | returns full list |
-|addFirst or offerFirst | add first postion of queue| one parameter, data | returns full list |
-|addLast or offerLast| add end of queue| one parameter, data | returns full list |
-|removeFirst | removes from first| no parameters | returns full list |
-|removeLast | removes from last| no parameters | returns full list |
+|add or offer | add data into queue| one parameter, data |  full list |
+|addFirst or offerFirst | add first postion of queue| one parameter, data |  full list |
+|addLast or offerLast| add end of queue| one parameter, data |  full list |
+|removeFirst | removes from first| no parameters |  full list |
+|removeLast | removes from last| no parameters |  full list |
