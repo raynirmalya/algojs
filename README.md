@@ -5,30 +5,7 @@
  
 ## Sorting
 
-* Bead Sort	
-* Bitonic Sort
-* Bogo Sort	
-* Bubble Sort
-* Bucket Sort
-* Cocktail Sort
-* Comb Sort
-* Count Sort
-* Cycle Sort
-* Gnome Sort
-* Heap Sort
-* Insertion Sort
-* Merge Sort
-* Pancake Sort
-* Pigeonhole Sort
-* Quick Sort
-* Radix Sort
-* Selection Sort
-* Shell Sort
-* Sleep Sort
-* Stooge Sort
-* Strand Sort
-* Swap Sort
-* Tim Sort
+* Bead Sort, Bitonic Sort, Bogo Sort, Bubble Sort, Bucket Sort, Cocktail Sort,  Comb Sort,  Count Sort,  Cycle Sort,  Gnome Sort,  Heap Sort,  Insertion Sort,  Merge Sort,  Pancake Sort,  Pigeonhole Sort,  Quick Sort,  Radix Sort,  Selection Sort,  Shell Sort,  Sleep Sort,  Stooge Sort,  Strand Sort,  Swap Sort,  Tim Sort
 
 ## How to use sort methods:
 
@@ -80,7 +57,7 @@ console.log('bubbleSort', indexOfSearchResult);
  * Linked List
  * Stack
 
-## How to use collection methods:
+## How to use collection classes:
  
 ### Javascript:
 
@@ -132,3 +109,7 @@ let curr = ll.swap(2,5);
 console.log(JSON.stringify(curr));
 console.log(JSON.stringify(ll.sort()));
 ```
+## Single Linked List
+|Methods | Uses|
+|---     | ---|
+|insertAtEnd | inserting at end of linked list|
