@@ -124,7 +124,7 @@ let curr = ll.swap(2,5);
 console.log(JSON.stringify(curr));
 console.log(JSON.stringify(ll.sort()));
 ```
-## Single Linked List
+## Single Linked List:
 |Methods | Uses| Paramaters | Return|
 |---     | ---|---     | ---|
 |add | inserting at end of linked list| one parameter, data to be added | returns full list|
@@ -149,7 +149,7 @@ console.log(JSON.stringify(ll.sort()));
 |sort | sorts linked list| no parameters | returns linked list |
 
 
-## Doubly Linked List
+## Doubly Linked List:
 |Methods | Uses| Paramaters | Return|
 |---     | ---|---     | ---|
 |add | inserting at end of linked list| one parameter, data to be added | returns full list|
@@ -170,3 +170,37 @@ console.log(JSON.stringify(ll.sort()));
 |fromArray | creates linked list from array| no parameters | returns linked list |
 |sort | sorts linked list| no parameters | returns linked list |
 
+
+## Stack:
+|Methods | Uses| Paramaters | Return|
+|---     | ---|---     | ---|
+|push | push data into stack| one parameter, data | returns true |
+|pop | pop from stack| no parameters | returns data or false |
+|peek | peeks from stack| no parameters | returns data or null |
+|clear | clears full stack| no parameters | returns true |
+|isEmpty | checks stack is empty or not| no parameters | returns true or false |
+|length | get length of a stack| no parameters | returns length |
+|reverse | reverse the stack| no parameters | returns full stack |
+|search | index of a particular data in stack| 1 parameter, data | returns index else false|
+|sort | sorts stack| no parameters | returns stack |
+
+
+## Queue:
+|Methods | Uses| Paramaters | Return|
+|---     | ---|---     | ---|
+|enqueue | push data into queue| one parameter, data | returns true |
+|dequeue | pop from queue| no parameters | returns data or false |
+|peek | peeks from queue| no parameters | returns data or null |
+|isEmpty | checks queue is empty or not| no parameters | returns true or false |
+|length | get length of a queue| no parameters | returns length |
+|sort | sorts queue| no parameters | returns queue |
+
+## deque:
+|Methods | Uses| Paramaters | Return|
+|---     | ---|---     | ---|
+|enqueue | push data into queue| one parameter, data | returns true |
+|dequeue | pop from queue| no parameters | returns data or false |
+|peek | peeks from queue| no parameters | returns data or null |
+|isEmpty | checks queue is empty or not| no parameters | returns true or false |
+|length | get length of a queue| no parameters | returns length |
+|sort | sorts queue| no parameters | returns queue |

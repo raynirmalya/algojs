@@ -19,7 +19,7 @@ class Stack {
           this.top = this.top.next;
           return item.data;
         } else {
-          return false;
+          return null;
         }
       }
       peek() {
