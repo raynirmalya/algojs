@@ -1,7 +1,3 @@
-## Installation:
- 
-### npm i @jsundefined/algojs
- 
 ## Algorithms:
  
  This is js library for algorithms related to data structure.

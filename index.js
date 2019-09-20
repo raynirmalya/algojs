@@ -31,7 +31,9 @@ const DoublyLinkedList = require("./collections/linked-list/DoublyLinkedList.js"
 const Stack = require("./collections/stack");
 const Queue = require("./collections/queue");
 const Deque = require("./collections/deque");
+const AlgoJs = require("./algo");
 
+console.log('bubble', AlgoJs.bubbleSort([12, 11, 13, 5, 6, 7]));
 // import bubbleSort from './bubble.js';
 
 console.log('bubble', bubbleSort([12, 11, 13, 5, 6, 7]));
