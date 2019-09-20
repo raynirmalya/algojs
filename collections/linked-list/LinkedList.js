@@ -29,7 +29,8 @@ class LinkedList{
                 current = current.next; 
             } 
             current.next = newNode; 
-        } 
+        }
+        return this.head; 
     } 
     
    insertAt(data, index)  { 
@@ -75,13 +76,14 @@ class LinkedList{
                 } 
                 prev.next = curr.next; 
             } 
-            return this.head; 
+            return curr; 
         } 
     } 
     
    deleteNode(data) { 
-        var current = this.head; 
-        var prev = null; 
+        let current = this.head; 
+        let prev = null; 
+        
         while (current != null) { 
             if (current.data === data) { 
                 if (prev === null) { 
@@ -94,7 +96,7 @@ class LinkedList{
             prev = current; 
             current = current.next; 
         } 
-        return this.head; 
+        return -1; 
     } 
     
    indexOf(data) { 
@@ -249,7 +251,7 @@ class LinkedList{
         values.forEach(value => this.add(value));
         return this.head;
       }
-     insertAtBeginning(data) {
+     insertAtStart(data) {
         let newNode = new Node(data);
         newNode.next = this.head;
         this.head = newNode;

@@ -110,6 +110,11 @@ console.log(JSON.stringify(curr));
 console.log(JSON.stringify(ll.sort()));
 ```
 ## Single Linked List
-|Methods | Uses|
-|---     | ---|
-|insertAtEnd | inserting at end of linked list|
+|Methods | Uses| Paramaters | Return|
+|---     | ---|---     | ---|
+|add | inserting at end of linked list| one parameter, data to be added | returns full list|
+|insertAtEnd | inserting data at end of linked list| one parameter, data to be added | returns full list|
+|insertAtStart | inserting data at start of linked list| one parameter, data to be added | returns full list|
+|insertAt | inserting data at particular index of linked list| 2 parameters, (data to be added, index) | returns full list|
+|deleteNodeAt | deleting data at particular index of linked list| 1 parameter, index | returns deleted node|
+|deleteNode | deleting data of linked list| 1 parameter, data | returns full list|
