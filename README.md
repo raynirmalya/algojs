@@ -18,6 +18,50 @@ let sortedArr = Algojs.bubbleSort([12, 11, 13, 5, 6, 7]);
 console.log('bubbleSort', sortedArr);
  ```
  
+## ******* Newest Addition in Library ::: Matrix Operations ********
+
+### Matrix Methods:
+* add
+* sub
+* mult
+* transpose
+* isIdentityMatrix
+* isSparseMatrix
+* isEqual
+* getUpperTraingularMatrix
+* getLowerTraingularMatrix
+
+### Javascript:
+
+```javascript
+let Matrix = require('@jsundefined/algojs/math/matrix');
+const matrices1 = new Matrix([[1,1,1],[2,2,2],[3,3,3]]);
+const matrices2 = new Matrix([[1,0,0],[0,1,0],[0,0,1]]);
+const matrices3 = new Matrix([[1,0,0],[0,1,0],[0,0,1]]);
+const matrices4 = new Matrix([[1,2],[3,4],[1,0]]);
+const matrices5 = new Matrix([[0,5,2],[6,7,3]]);
+console.log(matrices3.isIdentityMatrix(), 
+matrices1.isIdentityMatrix(), matrices3.isSparseMatrix(), 
+matrices1.isEqual(matrices3), matrices1.getLowerTraingularMatrix(),
+ matrices1.getUpperTraingularMatrix(), matrices1.getTransposeMatrix(),
+  matrices1.mult(matrices1), matrices4.kroneckerProduct(matrices5));
+```
+### Typescript / Angular:
+
+```javascript
+import Matrix from '@jsundefined/algojs/math/matrix';
+const matrices1 = new Matrix([[1,1,1],[2,2,2],[3,3,3]]);
+const matrices2 = new Matrix([[1,0,0],[0,1,0],[0,0,1]]);
+const matrices3 = new Matrix([[1,0,0],[0,1,0],[0,0,1]]);
+const matrices4 = new Matrix([[1,2],[3,4],[1,0]]);
+const matrices5 = new Matrix([[0,5,2],[6,7,3]]);
+console.log(matrices3.isIdentityMatrix(), 
+matrices1.isIdentityMatrix(), matrices3.isSparseMatrix(), 
+matrices1.isEqual(matrices3), matrices1.getLowerTraingularMatrix(),
+ matrices1.getUpperTraingularMatrix(), matrices1.getTransposeMatrix(),
+  matrices1.mult(matrices1), matrices4.kroneckerProduct(matrices5));
+```
+
 ## Sorting
 
 * Bead Sort, Bitonic Sort, Bogo Sort, Bubble Sort, Bucket Sort, Cocktail Sort,  Comb Sort,  Count Sort,  Cycle Sort,  Gnome Sort,  Heap Sort,  Insertion Sort,  Merge Sort,  Pancake Sort,  Pigeonhole Sort,  Quick Sort,  Radix Sort,  Selection Sort,  Shell Sort,  Sleep Sort,  Stooge Sort,  Strand Sort,  Swap Sort,  Tim Sort
@@ -37,7 +81,7 @@ console.log('bubbleSort', sortedArr);
 import bubbleSort from '@jsundefined/algojs/sort/bubble';
 let sortedArr = bubbleSort([12, 11, 13, 5, 6, 7]);
 console.log('bubbleSort', sortedArr);
- ````
+ ```
 ## Searching
 
  * Binary
