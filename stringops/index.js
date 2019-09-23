@@ -68,7 +68,71 @@ const zfill = (str, num, isRight) =>{
     return finalStr + str;
 }
 
-//console.log(zfill('10.000', 10));
+const toUpperFirstLetter = (str) => {
+    let finalStr = '';
+    const arr = str.split(' ');
+    for ( let i = 0; i < arr.length; i++) {
+        finalStr += capitalize(arr[i]) + ' ';
+    }
+    return finalStr.trim();
+}
+
+function formatTypes(type) {
+    switch(type) {
+        case ':<':
+        break;
+        case ':>':
+        break;
+        case ':^':
+        break;
+        case ':=':
+        break;
+        case ':+':
+        break;
+        case ':-':
+        break;
+        case ':=':
+        break;
+        case ': ':
+        break;
+        case ':,':
+        break;
+        case ':_':
+        break;
+        case ':b':
+        break;
+        case ':c':
+        break;
+        case ':d':
+        break;
+        case ':e':
+        break;
+        case ':E':
+        break;
+        case ':f':
+        break;
+        case ':g':
+        break;
+        case ':G':
+        break;
+        case ':o':
+        break;
+        case ':x':
+        break;
+        case ':X':
+        break;
+        case ':n':
+        break;
+        case ':%':
+        break;
+    }
+}
+
+const format = (str) => {
+
+}
+
+console.log(toUpperFirstLetter('Welcome to my world'));
 const StringOps = {};
 StringOps.capitalize = capitalize;
 StringOps.casefold = casefold;
@@ -78,5 +142,6 @@ StringOps.expandtabs = expandtabs;
 StringOps.isUpperCase = isUpperCase;
 StringOps.isLowerCase = isLowerCase;
 StringOps.swapcase = swapcase;
+StringOps.toUpperFirstLetter =  toUpperFirstLetter;
 
 module.exports = StringOps;
