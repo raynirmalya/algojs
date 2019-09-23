@@ -46,6 +46,10 @@ const expandtabs = (str, chars) => {
     return str.split("\t").join(replaceWith);
 }
 
+const replaceAll = (str, replaceStr, replaceWith) => {
+    return str.split(replaceStr).join(replaceWith);
+}
+
 const swapcase = (str) =>{
     let finalStr = '';
     const chars = str.split('');
@@ -128,11 +132,34 @@ function formatTypes(type) {
     }
 }
 
-const format = (str) => {
-
+function format() {
+    let formattedText = '';
+    if ( arguments.length === 0) {
+        return -1;
+    }
+    let str = arguments[0];
+    for(let i = 0; i<arguments.length; i++) {
+       // console.log(arguments[i],typeof(arguments[i]));
+        if(typeof(arguments[i]) === 'object') {
+          const keys = Object.keys(arguments[i]);
+          for ( let j = 0; j<keys.length; j++) {            
+            str = replaceAll(str,'{' + keys[j] + '}', arguments[i][keys[j]]);
+            console.log('1', str);
+          }
+          formattedText = str;
+        } else {
+            formattedText = arguments[i].replace(str,'{' + i + '}');
+            console.log('2', str);
+            formattedText = replaceAll(str,'{}', '{' + i + '}');
+            console.log('3', str);
+            formattedText = replaceAll(formattedText,'{' + i + '}', arguments[i]);
+            console.log('4', str);
+        }
+    }
+   return formattedText;
 }
 
-console.log(toUpperFirstLetter('Welcome to my world'));
+console.log(format("My name is {fname}, I'm {age}, {}, {}", {fname:'test',age:20}, 'new'));
 const StringOps = {};
 StringOps.capitalize = capitalize;
 StringOps.casefold = casefold;
