@@ -32,6 +32,7 @@ const Stack = require("./collections/stack");
 const Queue = require("./collections/queue");
 const Deque = require("./collections/deque");
 const Matrices = require("./math/matrix");
+const StringOps = require("./stringops");
 
 function AlgoJs (){
 }
@@ -70,5 +71,6 @@ AlgoJs.Stack = Stack;
 AlgoJs.Queue = Queue;
 AlgoJs.Deque = Deque;
 AlgoJs.Matrices = Matrices;
+AlgoJs.StringOps = StringOps;
 
 module.exports = AlgoJs;
