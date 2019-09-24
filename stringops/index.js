@@ -80,27 +80,77 @@ const toUpperFirstLetter = (str) => {
     }
     return finalStr.trim();
 }
-
-function formatTypes(type) {
+function isPositive(num) {
+    return isNaN(num) ? null : (num > 0);
+}
+function returnSign(num){
+    return isPositive(num) ? '+' : '-';
+}
+function formatTypes(type, arr, str, replaceWith) {
+    let operator, finalStr = '',sign;
+    console.log(type);
     switch(type) {
         case ':<':
-        break;
+                operator = arr[1].substring(0,arr[1].indexOf("}"));
+                finalStr += arr[0] + replaceWith;
+                for ( let i = 0; i < operator;i++ ){
+                    finalStr += ' ';
+                }
+                finalStr += arr[1].substring(arr[1].indexOf("}") + 1, arr[1].length);
+                break;
         case ':>':
-        break;
+                operator = arr[1].substring(0,arr[1].indexOf("}"));
+                finalStr += arr[0];
+                for ( let i = 0; i < operator;i++ ){
+                    finalStr += ' ';
+                }
+                finalStr += replaceWith;
+                finalStr += arr[1].substring(arr[1].indexOf("}") + 1, arr[1].length);
+                break;
         case ':^':
-        break;
-        case ':=':
-        break;
+                operator = arr[1].substring(0,arr[1].indexOf("}"));
+                finalStr += arr[0];
+                finalStr += center(replaceWith, operator);
+                finalStr += arr[1].substring(arr[1].indexOf("}") + 1, arr[1].length);
+                break;
+        case ':=': 
+                operator = arr[1].substring(0,arr[1].indexOf("}"));
+                sign = returnSign(replaceWith);
+                finalStr += arr[0]+sign;
+                for ( let i = 0; i < operator;i++ ){
+                    finalStr += ' ';
+                }
+                finalStr += Math.abs(replaceWith);
+                finalStr += arr[1].substring(arr[1].indexOf("}") + 1, arr[1].length);
+                break;
         case ':+':
-        break;
+                operator = arr[1].substring(0,arr[1].indexOf("}"));
+                sign = returnSign(replaceWith);
+                finalStr += arr[0]+sign;
+                finalStr += Math.abs(replaceWith);
+                finalStr += arr[1].substring(arr[1].indexOf("}") + 1, arr[1].length);
+                break;
         case ':-':
-        break;
-        case ':=':
-        break;
+                operator = arr[1].substring(0,arr[1].indexOf("}"));
+                finalStr += arr[0]+replaceWith;
+                finalStr += arr[1].substring(arr[1].indexOf("}") + 1, arr[1].length);
+                break;
         case ': ':
-        break;
+                operator = arr[1].substring(0,arr[1].indexOf("}"));
+                finalStr += arr[0]+' '+ replaceWith;
+                finalStr += arr[1].substring(arr[1].indexOf("}") + 1, arr[1].length);
+                break;
         case ':,':
-        break;
+                // const allDigits =  replaceWith.split('');
+                // for ( let j = allDigits.length; j>-1; j++) {
+
+                // }
+                // finalStr += arr[0]+' '+ replaceWith;
+                // for ( let i = 0; i < operator;i++ ){
+                //     finalStr += ' ';
+                // }
+                // finalStr += arr[1].substring(arr[1].indexOf("}") + 1, arr[1].length);
+                break;
         case ':_':
         break;
         case ':b':
@@ -130,6 +180,68 @@ function formatTypes(type) {
         case ':%':
         break;
     }
+    return finalStr;
+}
+
+function formatter(str, replaceWith) {
+  let arr;
+  // formatter :<
+  arr = str.split("{:<");
+  if(arr.length > 1) {
+    str = formatTypes(':<', arr, str, replaceWith);
+  }
+
+   // formatter :<
+   arr = str.split("{:>");
+   console.log(arr.length, arr);
+   if(arr.length > 1) {
+     str = formatTypes(':>', arr, str, replaceWith);
+   }
+
+   // formatter :^
+   arr = str.split("{:^");
+   console.log(arr.length, arr);
+   if(arr.length > 1) {
+     str = formatTypes(':^', arr, str, replaceWith);
+   }
+
+   // formatter :=
+   arr = str.split("{:=");
+   console.log(arr.length, arr);
+   if(arr.length > 1) {
+     str = formatTypes(':=', arr, str, replaceWith);
+   }
+
+    // formatter :+
+    arr = str.split("{:+");
+    console.log(arr.length, arr);
+    if(arr.length > 1) {
+    str = formatTypes(':+', arr, str, replaceWith);
+    }
+
+    // formatter :-
+    arr = str.split("{:-");
+    console.log(arr.length, arr);
+    if(arr.length > 1) {
+    str = formatTypes(':-', arr, str, replaceWith);
+    }
+
+     // formatter : 
+     arr = str.split("{: ");
+     console.log(arr.length, arr);
+     if(arr.length > 1) {
+     str = formatTypes(': ', arr, str, replaceWith);
+     }
+
+     // formatter : 
+     arr = str.split("{:,");
+     console.log(arr.length, arr);
+     if(arr.length > 1) {
+     str = formatTypes(':,', arr, str, replaceWith);
+     }
+
+   
+  return str;
 }
 
 function format() {
@@ -138,28 +250,23 @@ function format() {
         return -1;
     }
     let str = arguments[0];
-    for(let i = 0; i<arguments.length; i++) {
-       // console.log(arguments[i],typeof(arguments[i]));
+    for(let i = 1; i<arguments.length; i++) {
         if(typeof(arguments[i]) === 'object') {
           const keys = Object.keys(arguments[i]);
           for ( let j = 0; j<keys.length; j++) {            
             str = replaceAll(str,'{' + keys[j] + '}', arguments[i][keys[j]]);
-            console.log('1', str);
           }
-          formattedText = str;
         } else {
             formattedText = arguments[i].replace(str,'{' + i + '}');
-            console.log('2', str);
-            formattedText = replaceAll(str,'{}', '{' + i + '}');
-            console.log('3', str);
-            formattedText = replaceAll(formattedText,'{' + i + '}', arguments[i]);
-            console.log('4', str);
+            str = str.replace('{}', '{' + i + '}');
+            str = replaceAll(str,'{' + i + '}', arguments[i]);
         }
+        formattedText = str;
     }
    return formattedText;
 }
 
-console.log(format("My name is {fname}, I'm {age}, {}, {}", {fname:'test',age:20}, 'new'));
+console.log(formatter("The universe is {:,} years old.", 13800000000));
 const StringOps = {};
 StringOps.capitalize = capitalize;
 StringOps.casefold = casefold;
