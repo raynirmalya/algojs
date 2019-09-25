@@ -86,11 +86,14 @@ function isPositive(num) {
 function returnSign(num){
     return isPositive(num) ? '+' : '-';
 }
+function numberChangeWithChar(str, operator) {
+    return str.toString().replace(/\B(?=(\d{3})+(?!\d))/g,  !operator ? "," : operator );
+}
 function formatTypes(type, arr, str, replaceWith) {
     let operator, finalStr = '',sign;
     console.log(type);
     switch(type) {
-        case ':<':
+        case '<':
                 operator = arr[1].substring(0,arr[1].indexOf("}"));
                 finalStr += arr[0] + replaceWith;
                 for ( let i = 0; i < operator;i++ ){
@@ -98,7 +101,7 @@ function formatTypes(type, arr, str, replaceWith) {
                 }
                 finalStr += arr[1].substring(arr[1].indexOf("}") + 1, arr[1].length);
                 break;
-        case ':>':
+        case '>':
                 operator = arr[1].substring(0,arr[1].indexOf("}"));
                 finalStr += arr[0];
                 for ( let i = 0; i < operator;i++ ){
@@ -107,13 +110,13 @@ function formatTypes(type, arr, str, replaceWith) {
                 finalStr += replaceWith;
                 finalStr += arr[1].substring(arr[1].indexOf("}") + 1, arr[1].length);
                 break;
-        case ':^':
+        case '^':
                 operator = arr[1].substring(0,arr[1].indexOf("}"));
                 finalStr += arr[0];
                 finalStr += center(replaceWith, operator);
                 finalStr += arr[1].substring(arr[1].indexOf("}") + 1, arr[1].length);
                 break;
-        case ':=': 
+        case '=': 
                 operator = arr[1].substring(0,arr[1].indexOf("}"));
                 sign = returnSign(replaceWith);
                 finalStr += arr[0]+sign;
@@ -123,126 +126,185 @@ function formatTypes(type, arr, str, replaceWith) {
                 finalStr += Math.abs(replaceWith);
                 finalStr += arr[1].substring(arr[1].indexOf("}") + 1, arr[1].length);
                 break;
-        case ':+':
+        case '+':
                 operator = arr[1].substring(0,arr[1].indexOf("}"));
                 sign = returnSign(replaceWith);
                 finalStr += arr[0]+sign;
                 finalStr += Math.abs(replaceWith);
                 finalStr += arr[1].substring(arr[1].indexOf("}") + 1, arr[1].length);
                 break;
-        case ':-':
+        case '-':
                 operator = arr[1].substring(0,arr[1].indexOf("}"));
                 finalStr += arr[0]+replaceWith;
                 finalStr += arr[1].substring(arr[1].indexOf("}") + 1, arr[1].length);
                 break;
-        case ': ':
+        case ' ':
                 operator = arr[1].substring(0,arr[1].indexOf("}"));
                 finalStr += arr[0]+' '+ replaceWith;
                 finalStr += arr[1].substring(arr[1].indexOf("}") + 1, arr[1].length);
                 break;
-        case ':,':
-                // const allDigits =  replaceWith.split('');
-                // for ( let j = allDigits.length; j>-1; j++) {
-
-                // }
-                // finalStr += arr[0]+' '+ replaceWith;
-                // for ( let i = 0; i < operator;i++ ){
-                //     finalStr += ' ';
-                // }
-                // finalStr += arr[1].substring(arr[1].indexOf("}") + 1, arr[1].length);
+        case ',':
+                operator = arr[1].substring(0,arr[1].indexOf("}"));
+                finalStr += arr[0]+ numberChangeWithChar(replaceWith);
+                finalStr += arr[1].substring(arr[1].indexOf("}") + 1, arr[1].length);
                 break;
-        case ':_':
+        case '_':
+                operator = arr[1].substring(0,arr[1].indexOf("}"));
+                finalStr += arr[0]+ numberChangeWithChar(replaceWith, "_");
+                finalStr += arr[1].substring(arr[1].indexOf("}") + 1, arr[1].length);
+                break;
+        case 'b':
+                operator = arr[1].substring(0,arr[1].indexOf("}"));
+                finalStr += arr[0]+ decToBinary(replaceWith);
+                finalStr += arr[1].substring(arr[1].indexOf("}") + 1, arr[1].length);
+                break;
+        case 'c':
+                break;
+        case 'd':
+                operator = arr[1].substring(0,arr[1].indexOf("}"));
+                finalStr += arr[0]+ binaryToDec(replaceWith);
+                finalStr += arr[1].substring(arr[1].indexOf("}") + 1, arr[1].length);
+                break;
+        case 'e':
+                operator = arr[1].substring(0,arr[1].indexOf("}"));
+                finalStr += arr[0]+ replaceWith.toExponential();
+                finalStr += arr[1].substring(arr[1].indexOf("}") + 1, arr[1].length);
+                break;
+        case 'E':
         break;
-        case ':b':
+        case 'f':
         break;
-        case ':c':
+        case 'g':
         break;
-        case ':d':
+        case 'G':
         break;
-        case ':e':
+        case 'o':
         break;
-        case ':E':
+        case 'x':
         break;
-        case ':f':
+        case 'X':
         break;
-        case ':g':
+        case 'n':
         break;
-        case ':G':
-        break;
-        case ':o':
-        break;
-        case ':x':
-        break;
-        case ':X':
-        break;
-        case ':n':
-        break;
-        case ':%':
+        case '%':
         break;
     }
     return finalStr;
 }
 
-function formatter(str, replaceWith) {
+function formatter() {
   let arr;
-  // formatter :<
-  arr = str.split("{:<");
-  if(arr.length > 1) {
-    str = formatTypes(':<', arr, str, replaceWith);
+  if ( arguments.length === 0) {
+        return -1;
+   }
+   let str = arguments[0];
+    for(let i = 1; i<arguments.length; i++) {
+        arr = str.split("{:");
+        if(arr.length > 1) {
+            for(let j = 0; j<arr.length;j++) {
+                const operator = arr[j+1].substring(0,1);
+                console.log('operator', operator);
+                str = formatTypes(operator, arr, str, arguments[i]);
+        }
+    }
   }
 
-   // formatter :<
-   arr = str.split("{:>");
-   console.log(arr.length, arr);
-   if(arr.length > 1) {
-     str = formatTypes(':>', arr, str, replaceWith);
-   }
+//    // formatter :<
+//    arr = str.split("{:>");
+//    console.log(arr.length, arr);
+//    if(arr.length > 1) {
+//      str = formatTypes(':>', arr, str, replaceWith);
+//    }
 
-   // formatter :^
-   arr = str.split("{:^");
-   console.log(arr.length, arr);
-   if(arr.length > 1) {
-     str = formatTypes(':^', arr, str, replaceWith);
-   }
+//    // formatter :^
+//    arr = str.split("{:^");
+//    console.log(arr.length, arr);
+//    if(arr.length > 1) {
+//      str = formatTypes(':^', arr, str, replaceWith);
+//    }
 
-   // formatter :=
-   arr = str.split("{:=");
-   console.log(arr.length, arr);
-   if(arr.length > 1) {
-     str = formatTypes(':=', arr, str, replaceWith);
-   }
+//    // formatter :=
+//    arr = str.split("{:=");
+//    console.log(arr.length, arr);
+//    if(arr.length > 1) {
+//      str = formatTypes(':=', arr, str, replaceWith);
+//    }
 
-    // formatter :+
-    arr = str.split("{:+");
-    console.log(arr.length, arr);
-    if(arr.length > 1) {
-    str = formatTypes(':+', arr, str, replaceWith);
-    }
+//     // formatter :+
+//     arr = str.split("{:+");
+//     console.log(arr.length, arr);
+//     if(arr.length > 1) {
+//         str = formatTypes(':+', arr, str, replaceWith);
+//     }
 
-    // formatter :-
-    arr = str.split("{:-");
-    console.log(arr.length, arr);
-    if(arr.length > 1) {
-    str = formatTypes(':-', arr, str, replaceWith);
-    }
+//     // formatter :-
+//     arr = str.split("{:-");
+//     console.log(arr.length, arr);
+//     if(arr.length > 1) {
+//         str = formatTypes(':-', arr, str, replaceWith);
+//     }
 
-     // formatter : 
-     arr = str.split("{: ");
-     console.log(arr.length, arr);
-     if(arr.length > 1) {
-     str = formatTypes(': ', arr, str, replaceWith);
-     }
+//      // formatter : 
+//      arr = str.split("{: ");
+//      console.log(arr.length, arr);
+//      if(arr.length > 1) {
+//         str = formatTypes(': ', arr, str, replaceWith);
+//      }
 
-     // formatter : 
-     arr = str.split("{:,");
-     console.log(arr.length, arr);
-     if(arr.length > 1) {
-     str = formatTypes(':,', arr, str, replaceWith);
-     }
+//      // formatter :, 
+//      arr = str.split("{:,");
+//      console.log(arr.length, arr);
+//      if(arr.length > 1) {
+//         str = formatTypes(':,', arr, str, replaceWith);
+//      }
 
+//      // formatter :, 
+//      arr = str.split("{:_");
+//      console.log(arr.length, arr);
+//      if(arr.length > 1) {
+//         str = formatTypes(':_', arr, str, replaceWith);
+//      }
+
+//     // formatter :b 
+//     arr = str.split("{:b");
+//     console.log(arr.length, arr);
+//     if(arr.length > 1) {
+//         str = formatTypes(':b', arr, str, replaceWith);
+//     }
+
+//     // formatter :d
+//     arr = str.split("{:d");
+//     console.log(arr.length, arr);
+//     if(arr.length > 1) {
+//         str = formatTypes(':d', arr, str, replaceWith);
+//     }
+
+//     // formatter :e
+//     arr = str.split("{:e");
+//     console.log(arr.length, arr);
+//     if(arr.length > 1) {
+//         str = formatTypes(':e', arr, str, replaceWith);
+//     }
+ 
    
   return str;
 }
+
+function decToBinary(num) {
+    if (num != Math.floor(num)) {
+      return -1;
+    } else if (num < 0) {
+      return -1;    
+    } else {
+      const binary = parseInt(num, 10);
+      return binary.toString(2);
+    }
+  }
+
+  function binaryToDec(num) {
+    const dec = parseInt(num, 2);
+    return dec.toString(10);
+  }
 
 function format() {
     let formattedText = '';
@@ -266,7 +328,7 @@ function format() {
    return formattedText;
 }
 
-console.log(formatter("The universe is {:,} years old.", 13800000000));
+console.log(formatter("The universe is {:e} years old. {:b}", 5, 5));
 const StringOps = {};
 StringOps.capitalize = capitalize;
 StringOps.casefold = casefold;
