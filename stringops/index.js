@@ -89,86 +89,85 @@ function returnSign(num){
 function numberChangeWithChar(str, operator) {
     return str.toString().replace(/\B(?=(\d{3})+(?!\d))/g,  !operator ? "," : operator );
 }
-function formatTypes(type, arr, str, replaceWith) {
+function formatTypes(type, arr, str, replaceWith, indexOfValue) {
     let operator, finalStr = '',sign;
-    console.log(type);
     switch(type) {
         case '<':
-                operator = arr[1].substring(0,arr[1].indexOf("}"));
+                operator = arr[indexOfValue].substring(0,arr[indexOfValue].indexOf("}"));
                 finalStr += arr[0] + replaceWith;
                 for ( let i = 0; i < operator;i++ ){
                     finalStr += ' ';
                 }
-                finalStr += arr[1].substring(arr[1].indexOf("}") + 1, arr[1].length);
+                finalStr += arr[indexOfValue].substring(arr[indexOfValue].indexOf("}") + 1, arr[indexOfValue].length);
                 break;
         case '>':
-                operator = arr[1].substring(0,arr[1].indexOf("}"));
+                operator = arr[indexOfValue].substring(0,arr[indexOfValue].indexOf("}"));
                 finalStr += arr[0];
                 for ( let i = 0; i < operator;i++ ){
                     finalStr += ' ';
                 }
                 finalStr += replaceWith;
-                finalStr += arr[1].substring(arr[1].indexOf("}") + 1, arr[1].length);
+                finalStr += arr[indexOfValue].substring(arr[indexOfValue].indexOf("}") + 1, arr[indexOfValue].length);
                 break;
         case '^':
-                operator = arr[1].substring(0,arr[1].indexOf("}"));
+                operator = arr[indexOfValue].substring(0,arr[indexOfValue].indexOf("}"));
                 finalStr += arr[0];
                 finalStr += center(replaceWith, operator);
-                finalStr += arr[1].substring(arr[1].indexOf("}") + 1, arr[1].length);
+                finalStr += arr[indexOfValue].substring(arr[indexOfValue].indexOf("}") + 1, arr[indexOfValue].length);
                 break;
         case '=': 
-                operator = arr[1].substring(0,arr[1].indexOf("}"));
+                operator = arr[indexOfValue].substring(0,arr[indexOfValue].indexOf("}"));
                 sign = returnSign(replaceWith);
                 finalStr += arr[0]+sign;
                 for ( let i = 0; i < operator;i++ ){
                     finalStr += ' ';
                 }
                 finalStr += Math.abs(replaceWith);
-                finalStr += arr[1].substring(arr[1].indexOf("}") + 1, arr[1].length);
+                finalStr += arr[indexOfValue].substring(arr[indexOfValue].indexOf("}") + 1, arr[indexOfValue].length);
                 break;
         case '+':
-                operator = arr[1].substring(0,arr[1].indexOf("}"));
+                operator = arr[indexOfValue].substring(0,arr[indexOfValue].indexOf("}"));
                 sign = returnSign(replaceWith);
                 finalStr += arr[0]+sign;
                 finalStr += Math.abs(replaceWith);
-                finalStr += arr[1].substring(arr[1].indexOf("}") + 1, arr[1].length);
+                finalStr += arr[indexOfValue].substring(arr[indexOfValue].indexOf("}") + 1, arr[indexOfValue].length);
                 break;
         case '-':
-                operator = arr[1].substring(0,arr[1].indexOf("}"));
+                operator = arr[indexOfValue].substring(0,arr[indexOfValue].indexOf("}"));
                 finalStr += arr[0]+replaceWith;
-                finalStr += arr[1].substring(arr[1].indexOf("}") + 1, arr[1].length);
+                finalStr += arr[indexOfValue].substring(arr[indexOfValue].indexOf("}") + 1, arr[indexOfValue].length);
                 break;
         case ' ':
-                operator = arr[1].substring(0,arr[1].indexOf("}"));
+                operator = arr[indexOfValue].substring(0,arr[indexOfValue].indexOf("}"));
                 finalStr += arr[0]+' '+ replaceWith;
-                finalStr += arr[1].substring(arr[1].indexOf("}") + 1, arr[1].length);
+                finalStr += arr[indexOfValue].substring(arr[indexOfValue].indexOf("}") + 1, arr[indexOfValue].length);
                 break;
         case ',':
-                operator = arr[1].substring(0,arr[1].indexOf("}"));
+                operator = arr[indexOfValue].substring(0,arr[indexOfValue].indexOf("}"));
                 finalStr += arr[0]+ numberChangeWithChar(replaceWith);
-                finalStr += arr[1].substring(arr[1].indexOf("}") + 1, arr[1].length);
+                finalStr += arr[indexOfValue].substring(arr[indexOfValue].indexOf("}") + 1, arr[indexOfValue].length);
                 break;
         case '_':
-                operator = arr[1].substring(0,arr[1].indexOf("}"));
+                operator = arr[indexOfValue].substring(0,arr[indexOfValue].indexOf("}"));
                 finalStr += arr[0]+ numberChangeWithChar(replaceWith, "_");
-                finalStr += arr[1].substring(arr[1].indexOf("}") + 1, arr[1].length);
+                finalStr += arr[indexOfValue].substring(arr[indexOfValue].indexOf("}") + 1, arr[indexOfValue].length);
                 break;
         case 'b':
-                operator = arr[1].substring(0,arr[1].indexOf("}"));
+                operator = arr[indexOfValue].substring(0,arr[indexOfValue].indexOf("}"));
                 finalStr += arr[0]+ decToBinary(replaceWith);
-                finalStr += arr[1].substring(arr[1].indexOf("}") + 1, arr[1].length);
+                finalStr += arr[indexOfValue].substring(arr[indexOfValue].indexOf("}") + 1, arr[indexOfValue].length);
                 break;
         case 'c':
                 break;
         case 'd':
-                operator = arr[1].substring(0,arr[1].indexOf("}"));
+                operator = arr[indexOfValue].substring(0,arr[indexOfValue].indexOf("}"));
                 finalStr += arr[0]+ binaryToDec(replaceWith);
-                finalStr += arr[1].substring(arr[1].indexOf("}") + 1, arr[1].length);
+                finalStr += arr[indexOfValue].substring(arr[indexOfValue].indexOf("}") + 1, arr[indexOfValue].length);
                 break;
         case 'e':
-                operator = arr[1].substring(0,arr[1].indexOf("}"));
+                operator = arr[indexOfValue].substring(0,arr[indexOfValue].indexOf("}"));
                 finalStr += arr[0]+ replaceWith.toExponential();
-                finalStr += arr[1].substring(arr[1].indexOf("}") + 1, arr[1].length);
+                finalStr += arr[indexOfValue].substring(arr[indexOfValue].indexOf("}") + 1, arr[indexOfValue].length);
                 break;
         case 'E':
         break;
@@ -200,93 +199,13 @@ function formatter() {
    let str = arguments[0];
     for(let i = 1; i<arguments.length; i++) {
         arr = str.split("{:");
-        if(arr.length > 1) {
-            for(let j = 0; j<arr.length;j++) {
-                const operator = arr[j+1].substring(0,1);
-                console.log('operator', operator);
-                str = formatTypes(operator, arr, str, arguments[i]);
-        }
-    }
-  }
-
-//    // formatter :<
-//    arr = str.split("{:>");
-//    console.log(arr.length, arr);
-//    if(arr.length > 1) {
-//      str = formatTypes(':>', arr, str, replaceWith);
-//    }
-
-//    // formatter :^
-//    arr = str.split("{:^");
-//    console.log(arr.length, arr);
-//    if(arr.length > 1) {
-//      str = formatTypes(':^', arr, str, replaceWith);
-//    }
-
-//    // formatter :=
-//    arr = str.split("{:=");
-//    console.log(arr.length, arr);
-//    if(arr.length > 1) {
-//      str = formatTypes(':=', arr, str, replaceWith);
-//    }
-
-//     // formatter :+
-//     arr = str.split("{:+");
-//     console.log(arr.length, arr);
-//     if(arr.length > 1) {
-//         str = formatTypes(':+', arr, str, replaceWith);
-//     }
-
-//     // formatter :-
-//     arr = str.split("{:-");
-//     console.log(arr.length, arr);
-//     if(arr.length > 1) {
-//         str = formatTypes(':-', arr, str, replaceWith);
-//     }
-
-//      // formatter : 
-//      arr = str.split("{: ");
-//      console.log(arr.length, arr);
-//      if(arr.length > 1) {
-//         str = formatTypes(': ', arr, str, replaceWith);
-//      }
-
-//      // formatter :, 
-//      arr = str.split("{:,");
-//      console.log(arr.length, arr);
-//      if(arr.length > 1) {
-//         str = formatTypes(':,', arr, str, replaceWith);
-//      }
-
-//      // formatter :, 
-//      arr = str.split("{:_");
-//      console.log(arr.length, arr);
-//      if(arr.length > 1) {
-//         str = formatTypes(':_', arr, str, replaceWith);
-//      }
-
-//     // formatter :b 
-//     arr = str.split("{:b");
-//     console.log(arr.length, arr);
-//     if(arr.length > 1) {
-//         str = formatTypes(':b', arr, str, replaceWith);
-//     }
-
-//     // formatter :d
-//     arr = str.split("{:d");
-//     console.log(arr.length, arr);
-//     if(arr.length > 1) {
-//         str = formatTypes(':d', arr, str, replaceWith);
-//     }
-
-//     // formatter :e
-//     arr = str.split("{:e");
-//     console.log(arr.length, arr);
-//     if(arr.length > 1) {
-//         str = formatTypes(':e', arr, str, replaceWith);
-//     }
- 
-   
+        while(arr.length > 1) {
+            const operator = arr[1].substring(0,1);
+            str = formatTypes(operator, arr, str, arguments[i], 1);
+            arr[0] = str;
+            arr.splice(1,1);
+         }
+    }   
   return str;
 }
 
