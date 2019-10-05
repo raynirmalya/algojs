@@ -286,13 +286,11 @@ const unicodeToChar = (str)=> {
      const arr = str.split(" ");
      return arr[0].charAt(0).toUpperCase() + seperatedWith + arr[arr.length-1].charAt(0).toUpperCase() + seperatedWith;
  }
-console.log(isSpace("    "), isDigit(" s   "), getInitials("Nirmalya Roy", '.'));
-dirtyJson = [{a: null, b: 'abcd', c:null, d:[{x:{y:{o:{s:null,k:[{}], p:'test'}}}, z:['abc'], t:[{}], m:[], u:{c:[{d:'abcd'}]}}]}, {a: null, b: 'abcd', c:'xyz'}];
-    console.log(JSON.stringify(jsonCleaner(dirtyJson)));
+
 const StringOps = {};
 StringOps.capitalize = capitalize;
 StringOps.casefold = casefold;
-StringOps.count = center;
+StringOps.center = center;
 StringOps.count = count;
 StringOps.expandtabs = expandtabs;
 StringOps.isUpperCase = isUpperCase;

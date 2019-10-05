@@ -18,9 +18,38 @@ let sortedArr = Algojs.bubbleSort([12, 11, 13, 5, 6, 7]);
 console.log('bubbleSort', sortedArr);
  ```
  
-## ******* Newest Addition in Library ::: Matrix Operations ********
+## ** Newest Addition in Library ::: String Operations **
 
-### Matrix Methods:
+### String Methods:
+
+* capitalize
+* casefold
+* center
+* count
+* expandtabs
+* isUpperCase
+* isLowerCase
+* swapcase
+* toUpperFirstLetter
+* format
+* formatter
+* isPositive
+* returnSign
+* numberChangeWithChar
+* isAlnum
+* isDecimal
+* isAlpha
+* isDigit
+* isIdentifier
+* isSpace
+* unicodeToChar
+* binaryToDec
+* decToBinary
+* zfill
+* jsonCleaner
+
+## Matrix Methods:
+
 * add
 * sub
 * mult

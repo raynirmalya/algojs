@@ -1,6 +1,6 @@
 {
 		"name": "@jsundefined/algojs",
-		"version": "1.1.0",
+		"version": "1.1.2",
 		"description": "Algorithms in javascript",
 		"main": "index.js",
 		"scripts": {
