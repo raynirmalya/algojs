@@ -1,5 +1,5 @@
 
-
+const jsonCleaner = require("./json-cleaner.js");
 const capitalize = (str) => {
     return str.charAt(0).toUpperCase() + str.substring(1, str.length);
 };
@@ -50,6 +50,16 @@ const replaceAll = (str, replaceStr, replaceWith) => {
     return str.split(replaceStr).join(replaceWith);
 }
 
+const isAlnum = (str)=>{
+    const regex = /^[0-9a-zA-Z]+$/;
+    return str.match(regex)? true: false;
+}
+
+const isAlpha = (str)=>{
+    const regex = /^[a-zA-Z]+$/;
+    return str.match(regex)? true: false;
+}
+
 const swapcase = (str) =>{
     let finalStr = '';
     const chars = str.split('');
@@ -80,16 +90,26 @@ const toUpperFirstLetter = (str) => {
     }
     return finalStr.trim();
 }
-function isPositive(num) {
+const isPositive = (num) => {
     return isNaN(num) ? null : (num > 0);
 }
-function returnSign(num){
+const returnSign = (num) => {
     return isPositive(num) ? '+' : '-';
 }
-function numberChangeWithChar(str, operator) {
+const numberChangeWithChar = (str, operator) => {
     return str.toString().replace(/\B(?=(\d{3})+(?!\d))/g,  !operator ? "," : operator );
 }
-function formatTypes(type, arr, str, replaceWith, indexOfValue) {
+const isIdentifier = (str) => {
+    const regex = /^[A-Za-z][A-Za-z0-9_]*$/;
+    return str.match(regex)? true: false;
+}
+const isDigit = (str) => {
+    const regex = /^\d+/;
+    return str.toString().match(regex)? true: false;
+}
+
+
+const formatTypes = (type, arr, str, replaceWith, indexOfValue) => {
     let operator, finalStr = '',sign;
     switch(type) {
         case '<':
@@ -191,7 +211,7 @@ function formatTypes(type, arr, str, replaceWith, indexOfValue) {
     return finalStr;
 }
 
-function formatter() {
+const formatter = () => {
   let arr;
   if ( arguments.length === 0) {
         return -1;
@@ -209,7 +229,7 @@ function formatter() {
   return str;
 }
 
-function decToBinary(num) {
+const decToBinary = (num) => {
     if (num != Math.floor(num)) {
       return -1;
     } else if (num < 0) {
@@ -220,12 +240,12 @@ function decToBinary(num) {
     }
   }
 
-  function binaryToDec(num) {
+  const binaryToDec = (num) => {
     const dec = parseInt(num, 2);
     return dec.toString(10);
   }
 
-function format() {
+const format = () => {
     let formattedText = '';
     if ( arguments.length === 0) {
         return -1;
@@ -246,8 +266,29 @@ function format() {
     }
    return formattedText;
 }
+const unicodeToChar = (str)=> {
+    return str.replace(/\\u[\dA-F]{4}/gi, 
+            (match) => {
+                return String.fromCharCode(parseInt(match.replace(/\\u/g, ''), 16));
+           });
+ }
 
-console.log(formatter("The universe is {:e} years old. {:b}", 5, 5));
+ const isDecimal = (str) => {
+    const regex = /^[0-9]+$/;
+    return unicodeToChar(str).match(regex)? true: false;
+ }
+
+ const isSpace = (str) => {
+    return str.trim().length === 0;
+ }
+
+ const getInitials = (str, seperatedWith) => {
+     const arr = str.split(" ");
+     return arr[0].charAt(0).toUpperCase() + seperatedWith + arr[arr.length-1].charAt(0).toUpperCase() + seperatedWith;
+ }
+console.log(isSpace("    "), isDigit(" s   "), getInitials("Nirmalya Roy", '.'));
+dirtyJson = [{a: null, b: 'abcd', c:null, d:[{x:{y:{o:{s:null,k:[{}], p:'test'}}}, z:['abc'], t:[{}], m:[], u:{c:[{d:'abcd'}]}}]}, {a: null, b: 'abcd', c:'xyz'}];
+    console.log(JSON.stringify(jsonCleaner(dirtyJson)));
 const StringOps = {};
 StringOps.capitalize = capitalize;
 StringOps.casefold = casefold;
@@ -258,5 +299,21 @@ StringOps.isUpperCase = isUpperCase;
 StringOps.isLowerCase = isLowerCase;
 StringOps.swapcase = swapcase;
 StringOps.toUpperFirstLetter =  toUpperFirstLetter;
+StringOps.format = format;
+StringOps.formatter = formatter;
+StringOps.isPositive = isPositive;
+StringOps.returnSign = returnSign;
+StringOps.numberChangeWithChar = numberChangeWithChar;
+StringOps.isAlnum = isAlnum;
+StringOps.isDecimal = isDecimal;
+StringOps.isAlpha = isAlpha;
+StringOps.isDigit = isDigit;
+StringOps.isIdentifier = isIdentifier;
+StringOps.isSpace = isSpace;
+StringOps.unicodeToChar = unicodeToChar;
+StringOps.binaryToDec = binaryToDec;
+StringOps.decToBinary = decToBinary;
+StringOps.zfill = zfill;
+StringOps.jsonCleaner = jsonCleaner;
 
 module.exports = StringOps;
