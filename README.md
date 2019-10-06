@@ -3,6 +3,10 @@
  This is js library for algorithms related to data structure.
  Till now we have published below algorthims.
 
+## Install:
+
+#### npm i @jsundefined/algojs
+
 ## How to use all methods through AlgoJS class:
 
 ```javascript
