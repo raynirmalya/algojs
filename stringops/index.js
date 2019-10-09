@@ -286,7 +286,7 @@ const unicodeToChar = (str)=> {
      const arr = str.split(" ");
      return arr[0].charAt(0).toUpperCase() + seperatedWith + arr[arr.length-1].charAt(0).toUpperCase() + seperatedWith;
  }
-
+console.log(numberChangeWithChar(13446656676.9999,','));
 const StringOps = {};
 StringOps.capitalize = capitalize;
 StringOps.casefold = casefold;
