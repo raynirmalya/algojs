@@ -58,7 +58,7 @@
 				"Stack"
 		],
 		"author": "Nirmalya Roy",
-		"license": "ISC",
+		"license": "MIT",
 		"bugs": {
 				"url": "https://github.com/raynirmalya/algojs/issues"
 		},
