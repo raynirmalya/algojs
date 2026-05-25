@@ -11,20 +11,21 @@ const fastModularExponentiation = (base, exponent, modulus) => {
         throw new RangeError("Exponent must be non-negative.");
     }
 
-    let result = 1 % modulus;
-    let currentBase = ((base % modulus) + modulus) % modulus;
+    const modulusBigInt = BigInt(modulus);
+    let result = 1n % modulusBigInt;
+    let currentBase = BigInt(((base % modulus) + modulus) % modulus);
     let currentExponent = exponent;
 
     while (currentExponent > 0) {
         if (currentExponent % 2 === 1) {
-            result = (result * currentBase) % modulus;
+            result = (result * currentBase) % modulusBigInt;
         }
 
-        currentBase = (currentBase * currentBase) % modulus;
+        currentBase = (currentBase * currentBase) % modulusBigInt;
         currentExponent = Math.floor(currentExponent / 2);
     }
 
-    return result;
+    return Number(result);
 };
 
 module.exports = fastModularExponentiation;

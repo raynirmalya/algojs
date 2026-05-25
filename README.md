@@ -1,282 +1,214 @@
-## Algorithms:
- 
- This is js library for algorithms related to data structure.
- Till now we have published below algorthims.
+# algojs
 
-## Install:
+`algojs` is a JavaScript algorithms and data structures library with a broad API surface across sorting, searching, collections, graph algorithms, strings, dynamic programming, number theory, geometry, probabilistic structures, and more.
 
-#### npm i @jsundefined/algojs
+Current package highlights:
+- `300+` algorithm and data-structure exports
+- `346` root-level exports in the current build
+- CommonJS-first API with direct module imports and root-package access
+- Built-in test runner with `132` passing checks in the current suite
 
-## How to use all methods through AlgoJS class:
+## Install
 
-```javascript
-let Algojs = require('@jsundefined/algojs');
-let sortedArr = Algojs.bubbleSort([12, 11, 13, 5, 6, 7]);
-console.log('bubbleSort', sortedArr);
-```
-### Typescript / Angular:
-
-```javascript
-import Algojs from '@jsundefined/algojs';
-let sortedArr = Algojs.bubbleSort([12, 11, 13, 5, 6, 7]);
-console.log('bubbleSort', sortedArr);
- ```
- 
-## ** Newest Addition in Library ::: String Operations **
-
-### String Methods:
-
-* capitalize
-* casefold
-* center
-* count
-* expandtabs
-* isUpperCase
-* isLowerCase
-* swapcase
-* toUpperFirstLetter
-* format
-* formatter
-* isPositive
-* returnSign
-* numberChangeWithChar
-* isAlnum
-* isDecimal
-* isAlpha
-* isDigit
-* isIdentifier
-* isSpace
-* unicodeToChar
-* binaryToDec
-* decToBinary
-* zfill
-* jsonCleaner
-
-## Matrix Methods:
-
-* add
-* sub
-* mult
-* transpose
-* isIdentityMatrix
-* isSparseMatrix
-* isEqual
-* getUpperTraingularMatrix
-* getLowerTraingularMatrix
-
-### Javascript:
-
-```javascript
-let Matrix = require('@jsundefined/algojs/math/matrix');
-const matrices1 = new Matrix([[1,1,1],[2,2,2],[3,3,3]]);
-const matrices2 = new Matrix([[1,0,0],[0,1,0],[0,0,1]]);
-const matrices3 = new Matrix([[1,0,0],[0,1,0],[0,0,1]]);
-const matrices4 = new Matrix([[1,2],[3,4],[1,0]]);
-const matrices5 = new Matrix([[0,5,2],[6,7,3]]);
-console.log(matrices3.isIdentityMatrix(), 
-matrices1.isIdentityMatrix(), matrices3.isSparseMatrix(), 
-matrices1.isEqual(matrices3), matrices1.getLowerTraingularMatrix(),
- matrices1.getUpperTraingularMatrix(), matrices1.getTransposeMatrix(),
-  matrices1.mult(matrices1), matrices4.kroneckerProduct(matrices5));
-```
-### Typescript / Angular:
-
-```javascript
-import Matrix from '@jsundefined/algojs/math/matrix';
-const matrices1 = new Matrix([[1,1,1],[2,2,2],[3,3,3]]);
-const matrices2 = new Matrix([[1,0,0],[0,1,0],[0,0,1]]);
-const matrices3 = new Matrix([[1,0,0],[0,1,0],[0,0,1]]);
-const matrices4 = new Matrix([[1,2],[3,4],[1,0]]);
-const matrices5 = new Matrix([[0,5,2],[6,7,3]]);
-console.log(matrices3.isIdentityMatrix(), 
-matrices1.isIdentityMatrix(), matrices3.isSparseMatrix(), 
-matrices1.isEqual(matrices3), matrices1.getLowerTraingularMatrix(),
- matrices1.getUpperTraingularMatrix(), matrices1.getTransposeMatrix(),
-  matrices1.mult(matrices1), matrices4.kroneckerProduct(matrices5));
+```bash
+npm install @jsundefined/algojs
 ```
 
-## Sorting
+## Quick start
 
-* Bead Sort, Bitonic Sort, Bogo Sort, Bubble Sort, Bucket Sort, Cocktail Sort,  Comb Sort,  Count Sort,  Cycle Sort,  Gnome Sort,  Heap Sort,  Insertion Sort,  Merge Sort,  Pancake Sort,  Pigeonhole Sort,  Quick Sort,  Radix Sort,  Selection Sort,  Shell Sort,  Sleep Sort,  Stooge Sort,  Strand Sort,  Swap Sort,  Tim Sort
+### Root package import
 
-## How to use sort methods:
+```js
+const AlgoJs = require("@jsundefined/algojs");
 
-### Javascript:
-
-```javascript
-let bubbleSort = require('@jsundefined/algojs/sort/bubble.js');
-let sortedArr = bubbleSort([12, 11, 13, 5, 6, 7]);
-console.log('bubbleSort', sortedArr);
-```
-### Typescript / Angular:
-
-```javascript
-import bubbleSort from '@jsundefined/algojs/sort/bubble';
-let sortedArr = bubbleSort([12, 11, 13, 5, 6, 7]);
-console.log('bubbleSort', sortedArr);
- ```
-## Searching
-
- * Binary
- * Exponential
- * Fibonacci
- * Interpolation
- * Jump
- * Linear
- 
-## How to use search methods:
-  
-### Javascript:
-
-```javascript
-let linearSearch = require('@jsundefined/algojs/search/linear.js');
-let indexOfSearchResult = linearSearch([ -5, -10, 0, -3, 8, 5, -1, 10], 5); // if -1 means not found
-console.log('bubbleSort', indexOfSearchResult);
-```
-### Typescript / Angular:
-
-```javascript
-import linearSearch from '@jsundefined/algojs/search/linear';
-let indexOfSearchResult = linearSearch([ -5, -10, 0, -3, 8, 5, -1, 10], 5); // if -1 means not found
-console.log('bubbleSort', indexOfSearchResult);
+console.log(AlgoJs.quickSort([12, 11, 13, 5, 6, 7]));
+console.log(AlgoJs.breadthFirstSearch);
+console.log(new AlgoJs.BinaryHeap().isEmpty());
 ```
 
+### Direct module import
 
-## Collection
- 
- * Queue
- * Deque
- * Linked List
- * Stack
+```js
+const dijkstra = require("@jsundefined/algojs/graph/dijkstra");
+const Trie = require("@jsundefined/algojs/collections/trie");
 
-## How to use collection classes:
- 
-### Javascript:
-
-```javascript
-let LinkedList = require('@jsundefined/algojs/collections/linked-list/LinkedList.js');
-let ll = new LinkedList();
-ll.insertAtBeginning(11);
-ll.add(4);
-ll.add(12);
-ll.add(91);
-ll.add(21);
-ll.add(88);
-ll.add(27);
-ll.add(45);
-ll.add(77);
-ll.insertAtEnd(34);
-ll.deleteNodeAt(1);
-ll.deleteNode(34);
-ll.deleteFirstNode();
-ll.deleteLastNode();
-ll.insertAt(8,3);
-ll.reverse();
-let curr = ll.swap(2,5);
-console.log(JSON.stringify(curr));
-console.log(JSON.stringify(ll.sort()));
+const trie = new Trie();
+trie.insert("algo");
+console.log(trie.has("algo"));
 ```
-### Typescript / Angular:
 
-```javascript
-import LinkedList from '@jsundefined/algojs/collections/linked-list/LinkedList';
-let ll = new LinkedList();
-ll.insertAtBeginning(11);
-ll.add(4);
-ll.add(12);
-ll.add(91);
-ll.add(21);
-ll.add(88);
-ll.add(27);
-ll.add(45);
-ll.add(77);
-ll.insertAtEnd(34);
-ll.deleteNodeAt(1);
-ll.deleteNode(34);
-ll.deleteFirstNode();
-ll.deleteLastNode();
-ll.insertAt(8,3);
-ll.reverse();
-let curr = ll.swap(2,5);
-console.log(JSON.stringify(curr));
-console.log(JSON.stringify(ll.sort()));
+### Matrix utilities
+
+```js
+const Matrix = require("@jsundefined/algojs/math/matrix");
+
+const first = new Matrix([[1, 1], [2, 2]]);
+const second = new Matrix([[2, 0], [0, 2]]);
+
+console.log(first.add(second));
+console.log(first.transpose());
 ```
-## Single Linked List:
-|Methods | Uses| Paramaters | Return|
-|---     | ---|---     | ---|
-|add | inserting at end of linked list| one parameter, data to be added |  full list|
-|insertAtEnd | inserting data at end of linked list| one parameter, data to be added |  full list|
-|insertAtStart | inserting data at start of linked list| one parameter, data to be added |  full list|
-|insertAt | inserting data at particular index of linked list| 2 parameters, (data to be added, index) |  full list|
-|deleteNodeAt | deleting data at particular index of linked list| 1 parameter, index |  deleted node|
-|deleteNode | deleting data of linked list| 1 parameter, data |  full list|
-|deleteFirstNode | deleting first node of linked list| no parameters |  full list|
-|deleteLastNode | deleting last data of linked list| no parameters |  full list|
-|indexOf | indexOf a particular data in linked list| 1 parameter, data |  index else -1 |
-|search | index of a particular data in linked list| 1 parameter, data |  index else false|
-|getDataAt | getting data of a node at particular index of linked list| 1 parameter, index |  data else null|
-|getNodeAt | getting node at particular index of linked list| 1 parameter, index |  data else null|
-|clear | clears full linked list| no parameters |  true |
-|isEmpty | checks linked list is empty or not| no parameters |  true or false |
-|length | get length of a linked list| no parameters |  length |
-|reverse | reverse the linked list| no parameters |  full list |
-|swap | swap two nodes the linked list| 2 parameters, 2 nodes index |  full list |
-|toArray | creates array from linked list| no parameters |  array |
-|fromArray | creates linked list from array| no parameters |  linked list |
-|sort | sorts linked list| no parameters |  linked list |
 
+### String helpers
 
-## Doubly Linked List:
-|Methods | Uses| Paramaters | Return|
-|---     | ---|---     | ---|
-|add | inserting at end of linked list| one parameter, data to be added |  full list|
-|insertAt | inserting data at particular index of linked list| 2 parameters, (data to be added, index) |  full list|
-|deleteNodeAt | deleting data at particular index of linked list| 1 parameter, index |  deleted node|
-|deleteNode | deleting data of linked list| 1 parameter, data |  full list|
-|deleteFirstNode | deleting first node of linked list| no parameters |  full list|
-|deleteLastNode | deleting last data of linked list| no parameters |  full list|
-|search | index of a particular data in linked list| 1 parameter, data |  index else false|
-|getDataAt | getting data of a node at particular index of linked list| 1 parameter, index |  data else null|
-|getNodeAt | getting node at particular index of linked list| 1 parameter, index |  data else null|
-|clear | clears full linked list| no parameters |  true |
-|isEmpty | checks linked list is empty or not| no parameters |  true or false |
-|length | get length of a linked list| no parameters |  length |
-|reverse | reverse the linked list| no parameters |  full list |
-|swap | swap two nodes the linked list| 2 parameters, 2 nodes index |  full list |
-|toArray | creates array from linked list| no parameters |  array |
-|fromArray | creates linked list from array| no parameters |  linked list |
-|sort | sorts linked list| no parameters |  linked list |
+```js
+const StringOps = require("@jsundefined/algojs/stringops");
 
+console.log(StringOps.capitalize("algojs"));
+console.log(StringOps.swapcase("AlgoJS"));
+```
 
-## Stack:
-|Methods | Uses| Paramaters | Return|
-|---     | ---|---     | ---|
-|push | push data into stack| one parameter, data |  full data |
-|pop | pop from stack| no parameters |  data or false |
-|peek | peeks from stack| no parameters |  data or null |
-|clear | clears full stack| no parameters |  true |
-|isEmpty | checks stack is empty or not| no parameters |  true or false |
-|length | get length of a stack| no parameters |  length |
-|reverse | reverse the stack| no parameters |  full stack |
-|search | index of a particular data in stack| 1 parameter, data |  index else false|
-|sort | sorts stack| no parameters |  stack |
+## Testing
 
+Run the package test suite with:
 
-## Queue:
-|Methods | Uses| Paramaters | Return|
-|---     | ---|---     | ---|
-|enqueue | push data into queue| one parameter, data |  full data |
-|dequeue | pop from queue| no parameters |  data or false |
-|peek | peeks from queue| no parameters |  data or null |
-|isEmpty | checks queue is empty or not| no parameters |  true or false |
-|length | get length of a queue| no parameters |  length |
-|sort | sorts queue| no parameters |  queue |
+```bash
+npm test
+```
 
-## Deque:
-|Methods | Uses| Paramaters | Return|
-|---     | ---|---     | ---|
-|add or offer | add data into queue| one parameter, data |  full list |
-|addFirst or offerFirst | add first postion of queue| one parameter, data |  full list |
-|addLast or offerLast| add end of queue| one parameter, data |  full list |
-|removeFirst | removes from first| no parameters |  full list |
-|removeLast | removes from last| no parameters |  full list |
+## Notes
+
+- The package is CommonJS-first.
+- TypeScript declaration files are not bundled yet.
+- Legacy modules such as `math/matrix` and `stringops` are still included alongside the newer algorithm families.
+
+## Root package surface
+
+The root package exports the legacy sort/search API, the legacy collections, matrix and string helpers, and the newer category modules listed below.
+
+### Sorting
+
+`bubbleSort`, `selectionSort`, `insertionSort`, `mergeSort`, `quickSort`, `heapSort`, `radixSort`, `bucketSort`, `shellSort`, `timSort`, `pholeSort`, `cycleSort`, `cocktailSort`, `bitonicSort`, `pancakeSort`, `countSort`, `bogoSort`, `gnomeSort`, `stoogeSort`, `sleepSort`, `combSort`, `beadSort`
+
+### Searching
+
+`linearSearch`, `binarySearch`, `jumpSearch`, `interpolationSearch`, `exponentialSearch`, `fibonacciSearch`
+
+### Collections and data structures
+
+Count: `27`
+
+`LinkedList`, `DoublyLinkedList`, `Stack`, `Queue`, `Deque`, `AVLTree`, `RedBlackTree`, `Treap`, `BTree`, `BPlusTree`, `IntervalTree`, `OrderStatisticTree`, `BinaryHeap`, `PriorityQueue`, `DisjointSetUnion`, `Trie`, `PersistentTrie`, `SegmentTree`, `PersistentSegmentTree`, `FenwickTree`, `SparseTable`, `MonotonicQueue`, `MonotonicStack`, `BinaryTrie`, `KDTree`, `SqrtDecomposition`, `FenwickTree2D`
+
+### Array and selection utilities
+
+Count: `29`
+
+`slidingWindowMaximum`, `PrefixSum`, `DifferenceArray`, `quickSelect`, `medianOfMedians`, `nextPermutation`, `majorityVote`, `fisherYatesShuffle`, `reservoirSampling`, `coordinateCompression`, `inversionCount`, `kWayMerge`, `meetInTheMiddleSubsetSum`, `slidingWindowMedian`, `ternarySearch`, `mergeIntervals`, `intervalPartitioning`, `twoSum`, `threeSum`, `fourSum`, `maximumSubarrayCircular`, `containerWithMostWater`, `trappingRainWater`, `nextGreaterElement`, `nextSmallerElement`, `dailyTemperatures`, `longestConsecutiveSequence`, `maximumSumRectangle`, `medianTwoSortedArrays`
+
+### Greedy
+
+Count: `2`
+
+`activitySelection`, `optimalMergePattern`
+
+### Probabilistic and streaming
+
+Count: `6`
+
+`BloomFilter`, `CountMinSketch`, `ConsistentHashing`, `HyperLogLog`, `misraGries`, `AliasMethod`
+
+### Statistics
+
+Count: `2`
+
+`WelfordOnlineVariance`, `simpleLinearRegression`
+
+### Graph algorithms
+
+Count: `57`
+
+`Graph`, `WeightedGraph`, `breadthFirstSearch`, `depthFirstSearch`, `topologicalSort`, `directedCycleDetection`, `undirectedCycleDetection`, `connectedComponents`, `dijkstra`, `bellmanFord`, `floydWarshall`, `aStar`, `kruskalMST`, `primMST`, `tarjanSCC`, `articulationPoints`, `bridges`, `bipartiteCheck`, `dinicMaxFlow`, `hopcroftKarp`, `kosarajuSCC`, `johnsonShortestPaths`, `edmondsKarp`, `dagShortestPath`, `dagLongestPath`, `bidirectionalSearch`, `boruvkaMST`, `eulerianPath`, `eulerianCircuit`, `bronKerbosch`, `dsaturColoring`, `pageRank`, `hits`, `transitiveClosure`, `kargerMinCut`, `topologicalSortDFS`, `gabowSCC`, `biconnectedComponents`, `treeDiameter`, `treeIsomorphism`, `binaryLiftingLCA`, `tarjanOfflineLCA`, `idaStar`, `yenKShortestPaths`, `kCoreDecomposition`, `stoerWagnerMinCut`, `chuLiuEdmonds`, `pushRelabel`, `minCostMaxFlow`, `allTopologicalSorts`, `transitiveReduction`, `multiSourceBFS`, `widestPath`, `degeneracyOrdering`, `cycleBasis`, `hungarianAlgorithm`, `blossomAlgorithm`
+
+### String algorithms and indexing
+
+Count: `48`
+
+`prefixFunction`, `kmpSearch`, `zAlgorithm`, `rabinKarp`, `AhoCorasick`, `suffixArray`, `lcpArray`, `manacher`, `boyerMoore`, `RollingHash`, `longestCommonSubstring`, `shortestCommonSupersequence`, `hirschbergLCS`, `damerauLevenshtein`, `boyerMooreHorspool`, `bitapSearch`, `boothMinimalRotation`, `duvalLyndonFactorization`, `longestCommonPrefix`, `naiveStringSearch`, `zFunctionSearch`, `PolynomialHash`, `SuffixAutomaton`, `SuffixTree`, `UkkonenSuffixTree`, `FMIndex`, `smithWaterman`, `needlemanWunsch`, `burrowsWheelerTransform`, `inverseBurrowsWheelerTransform`, `huffmanCoding`, `runLengthEncoding`, `lz77`, `minimumWindowSubstring`, `longestUniqueSubstring`, `longestRepeatedSubstring`, `prefixAutomaton`, `finiteAutomatonSearch`, `anagramSearch`, `shortestPalindrome`, `longestPrefixSuffix`, `Eertree`, `wuManber`, `shannonFanoCoding`, `lz78`, `lzw`, `crc32`, `soundex`
+
+### Number theory
+
+Count: `16`
+
+`binaryGCD`, `sieveOfEratosthenes`, `linearSieve`, `segmentedSieve`, `primeFactorization`, `eulerTotient`, `extendedEuclidean`, `chineseRemainderTheorem`, `fermatPrimalityTest`, `millerRabin`, `pollardsRho`, `fastModularExponentiation`, `modularInverse`, `lucasTheorem`, `tonelliShanks`, `babyStepGiantStep`
+
+### Algebra
+
+Count: `14`
+
+`karatsubaMultiplication`, `gaussianElimination`, `hornerMethod`, `matrixDeterminant`, `matrixInverse`, `luDecomposition`, `choleskyDecomposition`, `lagrangeInterpolation`, `matrixExponentiation`, `strassenMatrixMultiplication`, `gramSchmidt`, `qrDecomposition`, `polynomialLongDivision`, `newtonInterpolation`
+
+### Math combinatorics
+
+Count: `6`
+
+`pascalTriangle`, `binomialCoefficient`, `catalanNumber`, `derangements`, `stirlingSecondKind`, `bellNumber`
+
+### Math sequences
+
+Count: `1`
+
+`fastDoublingFibonacci`
+
+### Transforms
+
+Count: `5`
+
+`fft`, `ifft`, `convolutionFFT`, `ntt`, `convolutionNTT`
+
+### Numerical methods
+
+Count: `6`
+
+`newtonRaphson`, `secantMethod`, `bisectionMethod`, `trapezoidalRule`, `simpsonRule`, `goldenSectionSearch`
+
+### Dynamic programming
+
+Count: `57`
+
+`longestIncreasingSubsequence`, `editDistance`, `longestCommonSubsequence`, `kadane`, `zeroOneKnapsack`, `coinChange`, `subsetSum`, `unboundedKnapsack`, `matrixChainMultiplication`, `rodCutting`, `eggDropping`, `wordBreak`, `palindromePartitioning`, `weightedIntervalScheduling`, `jobSequencingWithDeadlines`, `longestPalindromicSubsequence`, `longestBitonicSubsequence`, `partitionEqualSubsetSum`, `booleanParenthesization`, `interleavingStrings`, `distinctSubsequences`, `decodeWays`, `minimumSubsetSumDifference`, `longestRepeatingSubsequence`, `targetSum`, `optimalBST`, `houseRobber`, `houseRobberCircular`, `minimumPathSum`, `uniquePaths`, `uniquePathsWithObstacles`, `minimumCostClimbingStairs`, `burstBalloons`, `wildcardMatching`, `regularExpressionMatching`, `wordWrap`, `countPalindromicSubstrings`, `heldKarpTSP`, `assignmentBitmaskDP`, `longestAlternatingSubsequence`, `maximumSumIncreasingSubsequence`, `partitionKEqualSumSubsets`, `stockBuySellKTransactions`, `stockBuySellCooldown`, `stockBuySellFee`, `longestArithmeticSubsequence`, `minimumCostTickets`, `partitionArrayForMaxSum`, `diceThrowWays`, `subsetSumCount`, `minimumJumps`, `integerBreak`, `maximalSquare`, `maximalRectangle`, `minimumFallingPathSum`, `longestStringChain`, `longestDivisibleSubset`
+
+### Backtracking
+
+Count: `18`
+
+`nQueens`, `sudokuSolver`, `generateParentheses`, `towerOfHanoi`, `letterCombinationsPhone`, `ratInMaze`, `wordSearch`, `floodFill`, `combinationSum`, `combinationSum2`, `subsetsWithDup`, `permuteUnique`, `restoreIpAddresses`, `knightTour`, `mColoringProblem`, `deBruijnSequence`, `binaryStringsWithoutAdjacentOnes`, `generateAbbreviations`
+
+### Combinatorics helpers
+
+Count: `6`
+
+`permutations`, `combinations`, `powerSet`, `grayCode`, `kthPermutation`, `josephus`
+
+### Geometry
+
+Count: `15`
+
+`shoelaceArea`, `pointInPolygon`, `convexHullMonotoneChain`, `lineSegmentIntersection`, `bresenhamLine`, `grahamScan`, `closestPairOfPoints`, `polygonCentroid`, `ramerDouglasPeucker`, `midpointCircle`, `deCasteljauBezier`, `skylineProblem`, `rectangleUnionArea`, `intervalUnionLength`, `rotatingCalipersDiameter`
+
+### String helpers
+
+Count: `25`
+
+`capitalize`, `casefold`, `center`, `count`, `expandtabs`, `isUpperCase`, `isLowerCase`, `swapcase`, `toUpperFirstLetter`, `format`, `formatter`, `isPositive`, `returnSign`, `numberChangeWithChar`, `isAlnum`, `isDecimal`, `isAlpha`, `isDigit`, `isIdentifier`, `isSpace`, `unicodeToChar`, `binaryToDec`, `decToBinary`, `zfill`, `jsonCleaner`
+
+### Matrix helpers
+
+`Matrices`
+
+## Direct category imports
+
+You can import from the package root or directly from categories:
+
+```js
+const { dijkstra, Trie, suffixArray, zeroOneKnapsack } = require("@jsundefined/algojs");
+
+const graph = require("@jsundefined/algojs/graph");
+const strings = require("@jsundefined/algojs/strings");
+const dp = require("@jsundefined/algojs/dp");
+```
+
+## Repository
+
+- GitHub: `https://github.com/raynirmalya/algojs`
+- npm: `https://www.npmjs.com/package/@jsundefined/algojs`
