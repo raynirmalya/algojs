@@ -31,8 +31,80 @@ const DoublyLinkedList = require("./collections/linked-list/DoublyLinkedList.js"
 const Stack = require("./collections/stack");
 const Queue = require("./collections/queue");
 const Deque = require("./collections/deque");
+const AVLTree = require("./collections/avl-tree");
+const Treap = require("./collections/treap");
+const IntervalTree = require("./collections/interval-tree");
+const BinaryHeap = require("./collections/binary-heap");
+const PriorityQueue = require("./collections/priority-queue");
+const DisjointSetUnion = require("./collections/disjoint-set");
+const Trie = require("./collections/trie");
+const SegmentTree = require("./collections/segment-tree");
+const FenwickTree = require("./collections/fenwick-tree");
+const SparseTable = require("./collections/sparse-table");
+const MonotonicQueue = require("./collections/monotonic-queue");
+const MonotonicStack = require("./collections/monotonic-stack");
+const BinaryTrie = require("./collections/binary-trie");
 const Matrices = require("./math/matrix");
 const StringOps = require("./stringops");
+const {
+    slidingWindowMaximum,
+    PrefixSum,
+    DifferenceArray,
+    quickSelect,
+    medianOfMedians,
+} = require("./arrays");
+const {
+    Graph,
+    WeightedGraph,
+    breadthFirstSearch,
+    depthFirstSearch,
+    topologicalSort,
+    directedCycleDetection,
+    undirectedCycleDetection,
+    connectedComponents,
+    dijkstra,
+    bellmanFord,
+    floydWarshall,
+    aStar,
+    kruskalMST,
+    primMST,
+    tarjanSCC,
+    articulationPoints,
+    bridges,
+    bipartiteCheck,
+    dinicMaxFlow,
+    hopcroftKarp,
+    kosarajuSCC,
+    johnsonShortestPaths,
+    edmondsKarp,
+} = require("./graph");
+const {
+    prefixFunction,
+    kmpSearch,
+    zAlgorithm,
+    rabinKarp,
+    AhoCorasick,
+    suffixArray,
+    lcpArray,
+    manacher,
+    boyerMoore,
+    RollingHash,
+} = require("./strings");
+const {
+    sieveOfEratosthenes,
+    extendedEuclidean,
+    fastModularExponentiation,
+    modularInverse,
+} = require("./math/number-theory");
+const {
+    longestIncreasingSubsequence,
+    editDistance,
+    longestCommonSubsequence,
+    kadane,
+    zeroOneKnapsack,
+    coinChange,
+    subsetSum,
+} = require("./dp");
 
 function AlgoJs (){
 }
@@ -70,7 +142,70 @@ AlgoJs.DoublyLinkedList = DoublyLinkedList;
 AlgoJs.Stack = Stack;
 AlgoJs.Queue = Queue;
 AlgoJs.Deque = Deque;
+AlgoJs.AVLTree = AVLTree;
+AlgoJs.Treap = Treap;
+AlgoJs.IntervalTree = IntervalTree;
+AlgoJs.BinaryHeap = BinaryHeap;
+AlgoJs.PriorityQueue = PriorityQueue;
+AlgoJs.DisjointSetUnion = DisjointSetUnion;
+AlgoJs.Trie = Trie;
+AlgoJs.SegmentTree = SegmentTree;
+AlgoJs.FenwickTree = FenwickTree;
+AlgoJs.SparseTable = SparseTable;
+AlgoJs.MonotonicQueue = MonotonicQueue;
+AlgoJs.MonotonicStack = MonotonicStack;
+AlgoJs.BinaryTrie = BinaryTrie;
 AlgoJs.Matrices = Matrices;
+AlgoJs.Matrix = Matrices;
 AlgoJs.StringOps = StringOps;
+AlgoJs.slidingWindowMaximum = slidingWindowMaximum;
+AlgoJs.PrefixSum = PrefixSum;
+AlgoJs.DifferenceArray = DifferenceArray;
+AlgoJs.quickSelect = quickSelect;
+AlgoJs.medianOfMedians = medianOfMedians;
+AlgoJs.Graph = Graph;
+AlgoJs.WeightedGraph = WeightedGraph;
+AlgoJs.breadthFirstSearch = breadthFirstSearch;
+AlgoJs.depthFirstSearch = depthFirstSearch;
+AlgoJs.topologicalSort = topologicalSort;
+AlgoJs.directedCycleDetection = directedCycleDetection;
+AlgoJs.undirectedCycleDetection = undirectedCycleDetection;
+AlgoJs.connectedComponents = connectedComponents;
+AlgoJs.dijkstra = dijkstra;
+AlgoJs.bellmanFord = bellmanFord;
+AlgoJs.floydWarshall = floydWarshall;
+AlgoJs.aStar = aStar;
+AlgoJs.kruskalMST = kruskalMST;
+AlgoJs.primMST = primMST;
+AlgoJs.tarjanSCC = tarjanSCC;
+AlgoJs.articulationPoints = articulationPoints;
+AlgoJs.bridges = bridges;
+AlgoJs.bipartiteCheck = bipartiteCheck;
+AlgoJs.dinicMaxFlow = dinicMaxFlow;
+AlgoJs.hopcroftKarp = hopcroftKarp;
+AlgoJs.kosarajuSCC = kosarajuSCC;
+AlgoJs.johnsonShortestPaths = johnsonShortestPaths;
+AlgoJs.edmondsKarp = edmondsKarp;
+AlgoJs.prefixFunction = prefixFunction;
+AlgoJs.kmpSearch = kmpSearch;
+AlgoJs.zAlgorithm = zAlgorithm;
+AlgoJs.rabinKarp = rabinKarp;
+AlgoJs.AhoCorasick = AhoCorasick;
+AlgoJs.suffixArray = suffixArray;
+AlgoJs.lcpArray = lcpArray;
+AlgoJs.manacher = manacher;
+AlgoJs.boyerMoore = boyerMoore;
+AlgoJs.RollingHash = RollingHash;
+AlgoJs.sieveOfEratosthenes = sieveOfEratosthenes;
+AlgoJs.extendedEuclidean = extendedEuclidean;
+AlgoJs.fastModularExponentiation = fastModularExponentiation;
+AlgoJs.modularInverse = modularInverse;
+AlgoJs.longestIncreasingSubsequence = longestIncreasingSubsequence;
+AlgoJs.editDistance = editDistance;
+AlgoJs.longestCommonSubsequence = longestCommonSubsequence;
+AlgoJs.kadane = kadane;
+AlgoJs.zeroOneKnapsack = zeroOneKnapsack;
+AlgoJs.coinChange = coinChange;
+AlgoJs.subsetSum = subsetSum;
 
 module.exports = AlgoJs;
